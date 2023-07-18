@@ -1,0 +1,31 @@
+.image {
+  position: relative;
+  min-height: 600px;
+  width: 100%;
+}
+
+.item {
+  max-width: 32%;
+  width: 100%;
+  background: #fff;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.desc {
+  display: flex;
+  align-items: center;
+  padding: 25px;
+  p {
+    color: #4b4b4b;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-left: 30px;
+  }
+}
