@@ -2,10 +2,13 @@ import {
   Advantages,
   Button,
   CatalogPrewiev,
+  Clients,
+  Instagram,
   Partner,
 } from "@/shared/components";
 import styles from "@/shared/styles/Home.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -61,6 +64,22 @@ export default function Home() {
           <div className="sectionTitle">
             <h2>НАШІ КЛІЄНТИ</h2>
           </div>
+          <Clients />
+        </div>
+      </section>
+      <section>
+        <div className="container">
+          <div className="sectionTitle">
+            <h2>INSTAGRAM</h2>
+            <Link
+              className="btn-outline outline-gray"
+              href={`${process.env.INSTAGRAM_URL}`}
+              target="_blank"
+            >
+              Перейти
+            </Link>
+          </div>
+          <Instagram />
         </div>
       </section>
     </>

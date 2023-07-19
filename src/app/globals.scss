@@ -66,6 +66,9 @@ section {
   padding-bottom: 16px;
   position: relative;
   margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   h2 {
     color: #4b4b4b;
     font-size: 26px;
@@ -98,5 +101,15 @@ section {
   &:hover {
     background: #fff;
     color: #4b4b4b;
+  }
+}
+
+.outline-gray {
+  border: 2px solid #4b4b4b;
+  color: #4b4b4b;
+  &:hover {
+    background: #fd7a19;
+    color: white;
+    border: 2px solid transparent;
   }
 }

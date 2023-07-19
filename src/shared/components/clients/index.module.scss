@@ -1,0 +1,16 @@
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  max-width: 24%;
+  width: 100%;
+  padding: 70px 35px;
+  background-color: white;
+  position: relative;
+  margin-bottom: 20px;
+  &:not(:nth-child(4n)) {
+    margin-right: 20px;
+  }
+}
