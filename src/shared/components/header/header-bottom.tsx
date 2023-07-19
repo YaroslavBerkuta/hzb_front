@@ -7,7 +7,7 @@ import styles from "./index.module.scss";
 import { HeaderLink } from "../navigation/header-link";
 
 export const HeaderBottom = () => {
-  const { activeMenuKey } = useContext(AppStateContext);
+  const { activeMenuKey, setActiveMenuKey } = useContext(AppStateContext);
   const menu = menuConfig();
   const renderItem = useMemo(() => {
     const item = find(menu, { key: activeMenuKey });
@@ -21,7 +21,7 @@ export const HeaderBottom = () => {
                   key={it.key}
                   it={it}
                   className={() => {}}
-                  onClick={() => {}}
+                  onClick={() => setActiveMenuKey(null)}
                 />
               ))}
             </ul>

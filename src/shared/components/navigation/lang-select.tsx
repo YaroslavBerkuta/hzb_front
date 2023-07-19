@@ -21,7 +21,7 @@ export const LangSelect = () => {
       label: (
         <div style={{ display: "flex", alignItems: "center" }}>
           <Image
-            src="ua.svg"
+            src="/ua.svg"
             alt="lang"
             width={18}
             height={12}
@@ -37,7 +37,7 @@ export const LangSelect = () => {
       label: (
         <div style={{ display: "flex", alignItems: "center" }}>
           <Image
-            src="en.svg"
+            src="/en.svg"
             alt="lang"
             width={18}
             height={12}
@@ -58,7 +58,7 @@ export const LangSelect = () => {
       <a onClick={(e) => e.preventDefault()}>
         <Space>
           <Image
-            src={current || "ua.svg"}
+            src={current || "/ua.svg"}
             alt="lang"
             width={18}
             height={12}

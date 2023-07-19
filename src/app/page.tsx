@@ -12,9 +12,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
-  function test() {
-    console.log("sasdas");
-  }
   return (
     <>
       <section className={styles.hero}>

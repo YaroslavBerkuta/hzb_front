@@ -1,0 +1,27 @@
+.item {
+  color: #7f7f7f;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.flex {
+  ol {
+    display: flex;
+    align-items: center;
+    li {
+      a {
+        &:hover {
+          background-color: none !important;
+        }
+      }
+      &:last-child {
+        a {
+          color: #4b4b4b;
+        }
+      }
+    }
+  }
+}

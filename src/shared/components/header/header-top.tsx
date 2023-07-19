@@ -12,7 +12,7 @@ export const HeaderTop: FC<IProps> = ({}) => {
       <div className="container">
         <div className={styles.header_flex}>
           <Link href="/" className={styles.header_logo}>
-            <Image src="logo.svg" width={50} height={50} alt="logo" />
+            <Image src="/logo.svg" width={50} height={50} alt="logo" />
             <span>
               Хмельницьк
               <br />

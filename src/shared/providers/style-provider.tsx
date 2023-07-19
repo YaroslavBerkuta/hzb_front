@@ -12,7 +12,7 @@ export const StyledComponentsRegistry = ({
   useServerInsertedHTML(() => (
     <style
       id="antd"
-      dangerouslySetInnerHTML={{ __html: extractStyle(cache, false) }}
+      dangerouslySetInnerHTML={{ __html: extractStyle(cache, true) }}
     />
   ));
   return <StyleProvider cache={cache}>{children}</StyleProvider>;
