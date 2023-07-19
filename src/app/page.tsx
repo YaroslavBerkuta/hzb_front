@@ -5,12 +5,16 @@ import {
   Clients,
   Instagram,
   Partner,
+  TaskAnswer,
 } from "@/shared/components";
 import styles from "@/shared/styles/Home.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+  function test() {
+    console.log("sasdas");
+  }
   return (
     <>
       <section className={styles.hero}>
@@ -80,6 +84,14 @@ export default function Home() {
             </Link>
           </div>
           <Instagram />
+        </div>
+      </section>
+      <section>
+        <div className="container">
+          <div className="sectionTitle">
+            <h2>ЗАПИТАННЯ - ВІДПОВІДЬ</h2>
+          </div>
+          <TaskAnswer />
         </div>
       </section>
     </>

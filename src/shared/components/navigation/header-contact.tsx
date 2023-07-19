@@ -1,6 +1,7 @@
 import React from "react";
 
 import styles from "./index.module.scss";
+import { LangSelect } from "./lang-select";
 
 export const HeaderContact = () => {
   return (
@@ -32,7 +33,7 @@ export const HeaderContact = () => {
         </svg>
         +380977262832
       </a>
-      <a href="mailto:ula-hzb@ukr.net">
+      <a href={`mailto:ula-hzb@ukr.net`}>
         <svg
           width="16"
           height="16"
@@ -59,6 +60,7 @@ export const HeaderContact = () => {
         </svg>
         ula-hzb@ukr.net
       </a>
+      <LangSelect />
     </div>
   );
 };

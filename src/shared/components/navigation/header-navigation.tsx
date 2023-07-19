@@ -29,7 +29,7 @@ export const HeaderNavigation = () => {
   return (
     <nav>
       <ul className={styles.menu}>
-        {menuConfig.map((it) => (
+        {menuConfig().map((it) => (
           <HeaderLink
             key={it.key}
             it={it}

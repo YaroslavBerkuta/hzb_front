@@ -1,2 +1,2 @@
 export * from "./context-provider"
-export * from "./sentry-provider"
+export * from "./style-provider"

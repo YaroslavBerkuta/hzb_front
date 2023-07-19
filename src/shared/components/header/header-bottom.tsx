@@ -8,9 +8,9 @@ import { HeaderLink } from "../navigation/header-link";
 
 export const HeaderBottom = () => {
   const { activeMenuKey } = useContext(AppStateContext);
+  const menu = menuConfig();
   const renderItem = useMemo(() => {
-    const item = find(menuConfig, { key: activeMenuKey });
-
+    const item = find(menu, { key: activeMenuKey });
     if (item) {
       return (
         <div className={styles.header_bottom}>

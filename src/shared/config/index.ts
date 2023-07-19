@@ -1,2 +1,3 @@
-export * from "./menu.config"
-export * from "./ADVANTAGES.config"
+export * from "./menu.config";
+export * from "./advantages.config";
+export * from "./lang.config";
