@@ -1,6 +1,7 @@
 import { Footer, Header } from "@/shared/components";
 import "./globals.scss";
 import "swiper/css";
+import 'swiper/css/navigation';
 import type { Metadata } from "next";
 import { ContextProvider, SentryProvider } from "@/shared/providers";
 

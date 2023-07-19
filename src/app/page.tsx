@@ -56,6 +56,13 @@ export default function Home() {
           <Partner />
         </div>
       </section>
+      <section>
+        <div className="container">
+          <div className="sectionTitle">
+            <h2>НАШІ КЛІЄНТИ</h2>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

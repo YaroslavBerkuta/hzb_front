@@ -75,12 +75,28 @@ section {
     text-transform: uppercase;
   }
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     width: 70px;
     height: 4px;
     background: #fd7a19;
+  }
+}
+
+.btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 7px 15px;
+  transition: all 0.3s linear;
+  &:hover {
+    background: #fff;
+    color: #4b4b4b;
   }
 }
