@@ -21,7 +21,7 @@ export const HeaderBottom = () => {
                   key={it.key}
                   it={it}
                   className={() => {}}
-                  onClick={() => setActiveMenuKey(null)}
+                  onClick={() => setActiveMenuKey('')}
                 />
               ))}
             </ul>

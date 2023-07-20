@@ -19,7 +19,7 @@ export const HeaderNavigation = () => {
   const onClick = (key: string) => {
     if (active == key) {
       setActive(null);
-      setActiveMenuKey(null);
+      setActiveMenuKey('');
     } else {
       setActive(key);
       setActiveMenuKey(key);
