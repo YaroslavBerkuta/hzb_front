@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FC, createContext, useState } from "react";
+import React, { FC, createContext, useContext, useState } from "react";
 
 export const AppStateContext = createContext<any>({});
 
@@ -15,3 +15,5 @@ export const ContextProvider: FC<IProps> = ({ children }) => {
     </AppStateContext.Provider>
   );
 };
+
+export const useAppContext = () => useContext(AppStateContext);

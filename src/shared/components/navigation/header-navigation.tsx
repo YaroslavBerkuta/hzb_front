@@ -4,11 +4,11 @@ import { menuConfig } from "@/shared/config";
 import React, { useCallback, useContext, useState } from "react";
 import styles from "./index.module.scss";
 import { HeaderLink } from "./header-link";
-import { AppStateContext } from "@/shared/providers";
+import { useAppContext } from "@/shared/providers";
 
 export const HeaderNavigation = () => {
   const [active, setActive] = useState<string | null>();
-  const { setActiveMenuKey } = useContext(AppStateContext);
+  const { setActiveMenuKey } = useAppContext();
 
   const linkStyle = useCallback(
     (key: string) =>

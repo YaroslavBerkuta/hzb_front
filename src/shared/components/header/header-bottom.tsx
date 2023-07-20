@@ -1,13 +1,13 @@
 "use client";
 import { menuConfig } from "@/shared/config";
-import { AppStateContext } from "@/shared/providers";
+import { useAppContext } from "@/shared/providers";
 import { find } from "lodash";
 import React, { useContext, useMemo } from "react";
 import styles from "./index.module.scss";
 import { HeaderLink } from "../navigation/header-link";
 
 export const HeaderBottom = () => {
-  const { activeMenuKey, setActiveMenuKey } = useContext(AppStateContext);
+  const { activeMenuKey, setActiveMenuKey } = useAppContext();
   const menu = menuConfig();
   const renderItem = useMemo(() => {
     const item = find(menu, { key: activeMenuKey });
