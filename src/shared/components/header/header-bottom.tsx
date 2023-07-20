@@ -7,10 +7,10 @@ import styles from "./index.module.scss";
 import { HeaderLink } from "../navigation/header-link";
 
 export const HeaderBottom = () => {
-  // const { activeMenuKey, setActiveMenuKey } = useContext(AppStateContext);
+  const { activeMenuKey, setActiveMenuKey } = useContext(AppStateContext);
   const menu = menuConfig();
   const renderItem = useMemo(() => {
-    const item = find(menu, { key: 'about' });
+    const item = find(menu, { key: activeMenuKey });
     if (item) {
       return (
         <div className={styles.header_bottom}>
@@ -21,7 +21,7 @@ export const HeaderBottom = () => {
                   key={it.key}
                   it={it}
                   className={() => {}}
-                  onClick={() => {}}
+                  onClick={() => setActiveMenuKey(null)}
                 />
               ))}
             </ul>
@@ -30,6 +30,6 @@ export const HeaderBottom = () => {
       );
     }
     return <></>;
-  }, []);
+  }, [activeMenuKey]);
   return renderItem;
 };

@@ -18,11 +18,13 @@ interface IProps {
 export default function RootLayout({ children }: IProps) {
   return (
     <html lang="en">
-      <body>
-        <Header />
-        <main className="main">{children}</main>
-        <Footer />
-      </body>
+      <StyledComponentsRegistry>
+        <body>
+          <Header />
+          <main className="main">{children}</main>
+          <Footer />
+        </body>
+      </StyledComponentsRegistry>
     </html>
   );
 }

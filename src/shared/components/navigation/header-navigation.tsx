@@ -8,7 +8,7 @@ import { AppStateContext } from "@/shared/providers";
 
 export const HeaderNavigation = () => {
   const [active, setActive] = useState<string | null>();
-  // const { setActiveMenuKey } = useContext(AppStateContext);
+  const { setActiveMenuKey } = useContext(AppStateContext);
 
   const linkStyle = useCallback(
     (key: string) =>
@@ -19,10 +19,10 @@ export const HeaderNavigation = () => {
   const onClick = (key: string) => {
     if (active == key) {
       setActive(null);
-      // setActiveMenuKey(null);
+      setActiveMenuKey(null);
     } else {
       setActive(key);
-      // setActiveMenuKey(key);
+      setActiveMenuKey(key);
     }
   };
 
