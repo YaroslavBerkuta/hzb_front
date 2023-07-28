@@ -75,7 +75,7 @@ export const menuConfig = (): IHeaderMenu[] => {
         {
           label: "Реалізовані проекти",
           key: "project",
-          link: "/",
+          link: "/about/project",
           image: "/project.svg",
         },
         {
@@ -94,13 +94,13 @@ export const menuConfig = (): IHeaderMenu[] => {
         {
           label: "Основні",
           key: "contacts",
-          link: "/",
+          link: "/contacts/main",
           image: "/contacts.svg",
         },
         {
           label: "Дистриб’ютори",
           key: "distribution",
-          link: "/",
+          link: "/contacts/distribution",
           image: "/distribution.svg",
         },
       ],

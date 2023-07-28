@@ -63,6 +63,16 @@ section {
   }
 }
 
+.btn-white {
+  background: white;
+  color: #4b4b4b;
+  transition: all 0.3s linear;
+  &:hover {
+    background: #fd7a19;
+    color: #fff;
+  }
+}
+
 .sectionTitle {
   padding-bottom: 16px;
   position: relative;

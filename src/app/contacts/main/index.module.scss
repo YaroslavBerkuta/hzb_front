@@ -1,0 +1,112 @@
+.form {
+  background: rgba(75, 75, 75, 0.33);
+  backdrop-filter: blur(10px);
+  padding: 50px 80px;
+  margin-top: 80px;
+  span {
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  p {
+    color: #fff;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-top: 35px;
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 35px;
+  labeL {
+    max-width: 48%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    span {
+      color: #fff;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    input {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      margin-top: 15px;
+      color: #fff;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    textarea {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      margin-top: 15px;
+      color: #fff;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  span {
+    color: #4b4b4b;
+    font-size: 21px;
+    font-weight: bold;
+    margin-right: 35px;
+    display: inline-block;
+    margin-bottom: 11px;
+  }
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    span {
+      color: #4b4b4b;
+      font-size: 21px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin-right: 35px;
+      display: inline-block;
+      width: 100px;
+    }
+    p {
+      color: #4b4b4b;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  & > div {
+    max-width: 33%;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}

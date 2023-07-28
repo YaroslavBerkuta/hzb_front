@@ -1,12 +1,12 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { Breadcrumb } from "antd";
 import { useRouter, usePathname } from "next/navigation";
 import { ItemType } from "antd/es/breadcrumb/Breadcrumb";
 
 import styles from "./index.module.scss";
 
-export const Breadcrumbs = () => {
+export const Breadcrumbs: FC<{ color?: string }> = ({ color }) => {
   const router = useRouter();
   const pathname = usePathname();
   const [breadcrumbs, setBreadcrumbs] = useState<ItemType[] | null>(null);
@@ -45,8 +45,7 @@ export const Breadcrumbs = () => {
           items={breadcrumbs.map((it: ItemType, index: number) => ({
             key: it.key,
             title: it.title,
-            href: it.href,
-            className: styles.item,
+            className: color ? styles.itemWhite : styles.item,
           }))}
         />
       </div>

@@ -2,7 +2,7 @@
 import { menuConfig } from "@/shared/config";
 import { useAppContext } from "@/shared/providers";
 import { find } from "lodash";
-import React, { useContext, useMemo } from "react";
+import React, { useMemo } from "react";
 import styles from "./index.module.scss";
 import { HeaderLink } from "../navigation/header-link";
 

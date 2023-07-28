@@ -19,13 +19,11 @@ export default function RootLayout({ children }: IProps) {
   return (
     <html lang="en">
       <ContextProvider>
-        <StyledComponentsRegistry>
-          <body>
-            <Header />
-            <main className="main">{children}</main>
-            <Footer />
-          </body>
-        </StyledComponentsRegistry>
+        <body>
+          <Header />
+          <main className="main">{children}</main>
+          <Footer />
+        </body>
       </ContextProvider>
     </html>
   );
