@@ -2,6 +2,7 @@ import { Footer, Header } from "@/shared/components";
 import "./globals.scss";
 import "swiper/css";
 import "swiper/css/navigation";
+import 'swiper/css/pagination';
 import type { Metadata } from "next";
 import { ContextProvider, StyledComponentsRegistry } from "@/shared/providers";
 import "@/shared/services/system/storage.service";

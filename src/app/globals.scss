@@ -74,12 +74,20 @@ section {
 }
 
 .sectionTitle {
-  padding-bottom: 16px;
-  position: relative;
   margin-bottom: 30px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  flex-direction: column;
+  p {
+    color: #4b4b4b;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1.2px;
+    margin-top: 30px;
+  }
   h2 {
     color: #4b4b4b;
     font-size: 26px;
@@ -87,15 +95,17 @@ section {
     font-weight: 600;
     line-height: normal;
     text-transform: uppercase;
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 70px;
-    height: 4px;
-    background: #fd7a19;
+    position: relative;
+    padding-bottom: 16px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 70px;
+      height: 4px;
+      background: #fd7a19;
+    }
   }
 }
 

@@ -57,7 +57,7 @@ export const menuConfig = (): IHeaderMenu[] => {
         {
           label: "Виробничі потужності",
           key: "power",
-          link: "/",
+          link: "/about/power",
           image: "/power.svg",
         },
         {
