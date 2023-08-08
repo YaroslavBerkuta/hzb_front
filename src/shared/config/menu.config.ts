@@ -81,7 +81,7 @@ export const menuConfig = (): IHeaderMenu[] => {
         {
           label: "Нагороди",
           key: "awards",
-          link: "/",
+          link: "/about/awards",
           image: "/awards.svg",
         },
       ],

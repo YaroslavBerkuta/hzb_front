@@ -1,0 +1,60 @@
+.flex {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding: 50px;
+}
+
+.svg {
+  path {
+    transition: all 0.3s linear;
+    cursor: pointer;
+    &:hover {
+      fill: #fd7a19;
+    }
+  }
+}
+
+.detail {
+  max-width: 590px;
+  p {
+    color: #4b4b4b;
+    text-align: justify;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    line-height: normal;
+  }
+}
+
+.contact {
+  margin-top: 40px;
+  h3 {
+    color: #4b4b4b;
+    font-family: Montserrat;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  ul {
+    margin-top: 20px;
+    display: flex;
+    li {
+      margin-right: 40px;
+      p {
+        color: #4b4b4b;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      span {
+        color: #4b4b4b;
+        font-family: Montserrat;
+        font-size: 16px;
+      }
+    }
+  }
+}
