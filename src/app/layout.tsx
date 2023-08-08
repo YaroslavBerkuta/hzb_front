@@ -2,8 +2,9 @@ import { Footer, Header } from "@/shared/components";
 import "./globals.scss";
 import "swiper/css";
 import "swiper/css/navigation";
-import 'swiper/css/pagination';
+import "swiper/css/pagination";
 import type { Metadata } from "next";
+import { Montserrat } from "next/font/google";
 import { ContextProvider, StyledComponentsRegistry } from "@/shared/providers";
 import "@/shared/services/system/storage.service";
 
@@ -16,9 +17,11 @@ interface IProps {
   children: React.ReactNode;
 }
 
+const montserrat = Montserrat({ subsets: ["latin", "cyrillic"] });
+
 export default function RootLayout({ children }: IProps) {
   return (
-    <html lang="en">
+    <html lang="en" className={montserrat.className}>
       <ContextProvider>
         <body>
           <Header />
