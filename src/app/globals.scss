@@ -76,9 +76,10 @@ section {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  position: relative;
   p {
     color: #4b4b4b;
-    font-family: Montserrat;
+    font-family: "Montserrat", sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
@@ -104,6 +105,10 @@ section {
       height: 4px;
       background: #fd7a19;
     }
+  }
+  a{
+    position: absolute;
+    right: 0;
   }
 }
 

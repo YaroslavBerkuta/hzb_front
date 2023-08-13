@@ -63,13 +63,13 @@ export const menuConfig = (): IHeaderMenu[] => {
         {
           label: "Випробувальна лабораторія",
           key: "labaratory",
-          link: "/",
+          link: "/about/labaratory",
           image: "/labaratory.svg",
         },
         {
           label: "Система управління якістю",
           key: "system",
-          link: "/",
+          link: "/about/system",
           image: "/system.svg",
         },
         {
