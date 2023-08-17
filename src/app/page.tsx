@@ -11,7 +11,11 @@ import styles from "@/shared/styles/Home.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+interface IProps {
+  data: any;
+}
+
+function Home({ data }: IProps) {
   return (
     <>
       <section className={styles.hero}>
@@ -94,3 +98,5 @@ export default function Home() {
     </>
   );
 }
+
+export default Home;
