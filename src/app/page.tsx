@@ -11,11 +11,7 @@ import styles from "@/shared/styles/Home.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 
-interface IProps {
-  data: any;
-}
-
-function Home({ data }: IProps) {
+function Home() {
   return (
     <>
       <section className={styles.hero}>
