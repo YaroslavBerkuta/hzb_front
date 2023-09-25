@@ -26,13 +26,16 @@
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 35px;
-  labeL {
+  label {
     max-width: 48%;
     width: 100%;
     display: flex;
     flex-direction: column;
     margin-bottom: 35px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    &:last-child {
+      max-width: 100%;
+    }
     span {
       color: #fff;
       font-size: 16px;
@@ -61,6 +64,7 @@
       font-style: normal;
       font-weight: 700;
       line-height: normal;
+      height: 110px;
     }
   }
 }

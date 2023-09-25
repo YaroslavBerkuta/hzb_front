@@ -1,8 +1,7 @@
 import { Breadcrumbs } from "@/shared/components";
 import React from "react";
 
-import styles from "./index.module.scss";
-import { NewsItem } from "./components";
+import { NewsList } from "./components";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,11 +14,7 @@ export default function News() {
     <>
       <Breadcrumbs />
       <section>
-        <div className={styles.flex}>
-          <NewsItem />
-          <NewsItem />
-          <NewsItem />
-        </div>
+        <NewsList />
       </section>
     </>
   );
