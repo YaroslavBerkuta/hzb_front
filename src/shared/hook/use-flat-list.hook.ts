@@ -23,7 +23,7 @@ const defaultProps: IProps<any[]> = {
   loadParams: {},
   needInit: true,
   clearWhenReload: true,
-  defaultItems: null,
+  defaultItems: [],
   defaultLoading: true,
 };
 
