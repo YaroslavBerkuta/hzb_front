@@ -5,7 +5,7 @@ interface IProps<T> {
   limit?: number;
   page?: number;
   fetchItems: (...arr: any[]) => any;
-  serrializatorResponse?: <S>(data: S) => S;
+  serrializatorResponse?: <S>(data: S) => S | any;
   serrializatorItems?: (items: ReturnType<IProps<T>["fetchItems"]>) => T[];
   loadParams?: { [key: string]: string | boolean | number };
   needInit: boolean;
@@ -46,7 +46,7 @@ export const useFlatList = <T>(props: IProps<T>) => {
 
   const blockLoadingRef = useRef(false);
 
-  const [items, setItems] = useState<T[]>(props.defaultItems);
+  const [items, setItems] = useState<T[] | any>(props.defaultItems);
   const [totalCount, setTotalCount] = useState(0);
   const [isLoading, setLoading] = useState(props.defaultLoading);
   const [isLoadingNext, setIsLoadingNext] = useState(false);
@@ -67,7 +67,7 @@ export const useFlatList = <T>(props: IProps<T>) => {
     blockLoadingRef.current = true;
     try {
       if (props.clearWhenReload) setItems([]);
-      const response = props.serrializatorResponse(
+      const response = props?.serrializatorResponse?.(
         await props.fetchItems(loadParams.current)
       );
 
@@ -80,7 +80,8 @@ export const useFlatList = <T>(props: IProps<T>) => {
         page: loadParams.current.page + 1,
         count: response.data.count,
       };
-      const fetchedItems = props.serrializatorItems(response.data.items);
+      const fetchedItems: any =
+        props.serrializatorItems?.(response.data.items) || null;
 
       if (firstFetch) setItems(fetchedItems);
       else setItems([...items, ...fetchedItems]);
