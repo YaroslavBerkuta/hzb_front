@@ -37,3 +37,12 @@
     letter-spacing: -0.08px;
   }
 }
+
+@media (max-width: 1440px) {
+  .item {
+    max-width: 24%;
+  }
+  .info {
+    max-width: 210px;
+  }
+}

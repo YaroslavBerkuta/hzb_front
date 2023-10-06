@@ -13,8 +13,8 @@
   }
 }
 
-.activeBullet{
-    background: #FD7A19!important;
+.activeBullet {
+  background: #fd7a19 !important;
 }
 
 .navigation {
@@ -31,5 +31,14 @@
     &:first-child {
       margin-right: 15px;
     }
+  }
+}
+
+@media (max-width: 1440px) {
+  .slider {
+    max-width: 790px;
+  }
+  .item {
+    padding: 40px 80px;
   }
 }

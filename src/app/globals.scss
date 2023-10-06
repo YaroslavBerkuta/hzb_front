@@ -31,6 +31,7 @@ a {
 
 img {
   max-width: 100%;
+  height: 100%;
 }
 
 section {
@@ -106,7 +107,7 @@ section {
       background: #fd7a19;
     }
   }
-  a{
+  a {
     position: absolute;
     right: 0;
   }
@@ -141,5 +142,11 @@ section {
 .ant-collapse-item-active {
   .ant-collapse-header-text {
     color: #fd7a19;
+  }
+}
+
+@media (max-width: 1440px) {
+  .container {
+    max-width: 97%;
   }
 }
