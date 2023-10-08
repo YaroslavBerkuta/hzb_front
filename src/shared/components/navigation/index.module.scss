@@ -1,3 +1,4 @@
+
 .link {
   color: #4b4b4b;
   text-align: center;
@@ -51,6 +52,36 @@
           fill: #fd7a19;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .link {
+    font-size: 18px;
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    a {
+      font-size: 0;
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+  }
+  .burger {
+    display: flex;
+    flex-direction: column;
+    span {
+      margin-bottom: 5px;
+      width: 28px;
+      height: 3px;
+      background: #4b4b4b;
     }
   }
 }

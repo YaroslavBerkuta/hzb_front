@@ -28,16 +28,23 @@
       margin-bottom: 10px;
       position: relative;
       padding-left: 25px;
-      &::after{
+      &::after {
         position: absolute;
         top: 50%;
         left: 0;
-        content: '';
+        content: "";
         width: 5px;
         height: 5px;
         border-radius: 50%;
         background-color: #4b4b4b;
       }
     }
+  }
+}
+
+@media (max-width: 1024px) {
+  .item {
+    padding: 40px;
+    flex-direction: column;
   }
 }

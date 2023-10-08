@@ -5,7 +5,12 @@ export interface IHeaderMenu {
   label: string;
   key: string;
   link: string | null;
-  children?: IHeaderMenu[];
+  children?: {
+    label: string;
+    key: string;
+    link: string;
+    image?: string;
+  }[];
   image?: string;
 }
 

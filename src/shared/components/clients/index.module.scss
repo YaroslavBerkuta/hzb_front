@@ -66,3 +66,23 @@
     max-width: 30%;
   }
 }
+
+@media (max-width: 768px) {
+  .info {
+    h3 {
+      font-size: 25px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+}
+@media (max-width: 425px) {
+  .item {
+    max-width: 100%;
+    margin-right: 0;
+    &:not(:nth-child(4n)) {
+      margin-right: 0;
+    }
+  }
+}

@@ -49,3 +49,28 @@
     height: 100%;
   }
 }
+
+@media (max-width: 1024px) {
+  .item {
+    padding: 50px;
+    .detail {
+      margin-right: 15px;
+      min-width: 48%;
+      h2 {
+        font-size: 22px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .item {
+    flex-direction: column;
+  }
+  .image {
+    margin-top: 30px;
+  }
+}

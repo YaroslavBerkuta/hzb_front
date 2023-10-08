@@ -2,13 +2,12 @@ import React, { FC } from "react";
 import Image from "next/image";
 
 import styles from "../index.module.scss";
-import Link from "next/link";
 
 interface IProps {}
 
 export const NewsItem: FC<IProps> = ({}) => {
   return (
-    <Link className={styles.item} href="news/1">
+    <div className={styles.item}>
       <div className="container">
         <div className={styles.itemFlex}>
           <div className={styles.image}>
@@ -124,6 +123,6 @@ export const NewsItem: FC<IProps> = ({}) => {
           </div>
         </div>
       </div>
-    </Link>
+    </div>
   );
 };

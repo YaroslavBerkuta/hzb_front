@@ -36,3 +36,37 @@
     display: inline-block;
   }
 }
+
+@media (max-width: 1440px) {
+  .flex {
+  }
+  .detail {
+    p {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .item {
+    max-width: 100%;
+    flex-direction: column;
+    .slider {
+      max-width: 100% !important;
+      margin-top: 15px;
+    }
+  }
+  .detail {
+    width: 100%;
+    max-width: 100%;
+    p {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .item {
+    padding: 50px;
+  }
+}

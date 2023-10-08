@@ -10,7 +10,7 @@ export const NewsList = () => {
     fetchItems: getList,
     needInit: true,
   });
-  console.log("list:", list.items);
+
   return (
     <div className={styles.flex}>
       <NewsItem />

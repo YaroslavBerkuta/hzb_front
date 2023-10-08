@@ -36,9 +36,21 @@
 
 @media (max-width: 1440px) {
   .slider {
-    max-width: 790px;
+    max-width: 670px;
   }
   .item {
     padding: 40px 80px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .item {
+    padding: 40px;
+  }
+}
+@media (max-width: 1024px) {
+  .slider {
+    max-width: 100%;
+    margin-top: 20px;
   }
 }

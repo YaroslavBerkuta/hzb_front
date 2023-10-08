@@ -10,7 +10,7 @@ export default function Main() {
       <section
         style={{
           padding: "0 0 100px 0",
-          background: "no-repeat center/100% url(/contactBg.png)",
+          background: "no-repeat center/cover url(/contactBg.png)",
         }}
       >
         <Breadcrumbs color="white" />

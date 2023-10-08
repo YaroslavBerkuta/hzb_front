@@ -41,7 +41,7 @@ export default function Distribution() {
                 </ul>
               </div>
             </div>
-            <div>
+            <div className={styles.mapWrapper}>
               <Map />
             </div>
           </div>

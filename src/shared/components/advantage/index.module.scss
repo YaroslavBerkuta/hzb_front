@@ -43,6 +43,28 @@
     max-width: 24%;
   }
   .info {
-    max-width: 210px;
+    max-width: 190px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .item {
+    max-width: 37%;
+    margin-bottom: 15px;
+  }
+  .flex {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 768px) {
+  .item {
+    max-width: 100%;
+    justify-content: flex-start;
+    padding: 30px 20px;
+  }
+  .info {
+    margin-left: 25px;
+    max-width: 100%;
   }
 }

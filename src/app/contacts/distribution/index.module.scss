@@ -58,3 +58,25 @@
     }
   }
 }
+
+@media (max-width: 1440px) {
+  .svg {
+    max-width: 100%;
+  }
+  .mapWrapper {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .flex {
+    flex-direction: column-reverse;
+  }
+  .mapWrapper {
+    max-width: 100%;
+  }
+  .detail {
+    max-width: 100%;
+    margin-top: 50px;
+  }
+}

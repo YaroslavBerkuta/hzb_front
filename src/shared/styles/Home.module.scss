@@ -30,3 +30,51 @@
   min-height: 500px;
   margin-top: 50px;
 }
+
+@media (max-width: 1440px) {
+  .heroDesc {
+    h1 {
+      font-size: 25px;
+      max-width: 655px;
+    }
+  }
+  .heroImage {
+    img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .heroFlex {
+    flex-direction: column-reverse;
+    h1 {
+      position: absolute;
+      top: 20%;
+      left: 40px;
+      z-index: 20;
+      color: white;
+      font-size: 30px;
+    }
+  }
+  .heroImage {
+    margin-top: 0;
+    position: relative;
+    z-index: -1;
+  }
+  .heroDesc {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .heroFlex {
+    h1 {
+      max-width: 80%;
+      font-size: 27px;
+      left: 30px;
+    }
+  }
+}

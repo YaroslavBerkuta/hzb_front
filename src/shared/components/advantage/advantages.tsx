@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React from "react";
 import Image from "next/image";
 import styles from "./index.module.scss";
 import { advantages } from "@/shared/config";

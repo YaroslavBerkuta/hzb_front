@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./index.module.scss";
-import { Collapse, theme } from "antd";
+import { Collapse } from "antd";
 import { RightOutlined } from "@ant-design/icons";
 import { FileForm } from "../form";
 

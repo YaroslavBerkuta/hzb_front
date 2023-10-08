@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 
 import styles from "./index.module.scss";
@@ -7,7 +6,7 @@ import styles from "./index.module.scss";
 export const Clients = () => {
   return (
     <div className={styles.flex}>
-      <Link href="" className={styles.item}>
+      <div className={styles.item}>
         <Image
           src="/client.png"
           alt="client"
@@ -22,8 +21,8 @@ export const Clients = () => {
             ринку.
           </p>
         </div>
-      </Link>
-      <Link href="" className={styles.item}>
+      </div>
+      <div className={styles.item}>
         <Image
           src="/client.png"
           alt="client"
@@ -38,8 +37,8 @@ export const Clients = () => {
             ринку.
           </p>
         </div>
-      </Link>
-      <Link href="" className={styles.item}>
+      </div>
+      <div className={styles.item}>
         <Image
           src="/client.png"
           alt="client"
@@ -54,8 +53,8 @@ export const Clients = () => {
             ринку.
           </p>
         </div>
-      </Link>
-      <Link href="" className={styles.item}>
+      </div>
+      <div className={styles.item}>
         <Image
           src="/client.png"
           alt="client"
@@ -70,8 +69,8 @@ export const Clients = () => {
             ринку.
           </p>
         </div>
-      </Link>
-      <Link href="" className={styles.item}>
+      </div>
+      <div className={styles.item}>
         <Image
           src="/client.png"
           alt="client"
@@ -86,7 +85,7 @@ export const Clients = () => {
             ринку.
           </p>
         </div>
-      </Link>
+      </div>
     </div>
   );
 };

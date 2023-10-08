@@ -1,12 +1,37 @@
+"use client";
 import Link from "next/link";
-import React, { FC } from "react";
+import React, { FC, useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import { HeaderContact, HeaderNavigation } from "../navigation";
 import styles from "./index.module.scss";
+import { MenuMobil } from "./menu-mobil";
 
 interface IProps {}
 
 export const HeaderTop: FC<IProps> = ({}) => {
+  const [width, setWidth] = useState(0);
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, []);
+
+  const renderMenu = useCallback(() => {
+    if (width > 768) {
+      return (
+        <>
+          <HeaderNavigation />
+          <HeaderContact />
+        </>
+      );
+    } else {
+      console.log("window:", width);
+      return (
+        <>
+          <HeaderContact />
+          <MenuMobil />
+        </>
+      );
+    }
+  }, [width]);
   return (
     <div className={styles.header_top}>
       <div className="container">
@@ -19,8 +44,7 @@ export const HeaderTop: FC<IProps> = ({}) => {
               залізобетон
             </span>
           </Link>
-          <HeaderNavigation />
-          <HeaderContact />
+          {renderMenu()}
         </div>
       </div>
     </div>

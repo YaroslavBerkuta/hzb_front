@@ -10,3 +10,15 @@
   position: relative;
   min-height: 400px;
 }
+
+@media (max-width: 1024px) {
+  .item {
+    max-width: 48%;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 425px) {
+  .item {
+    min-height: 250px;
+  }
+}
