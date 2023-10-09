@@ -62,3 +62,14 @@
     padding: 50px;
   }
 }
+
+@media (max-width: 500px) {
+  .item {
+    padding: 25px;
+  }
+  .detail {
+    p {
+      font-size: 15px;
+    }
+  }
+}

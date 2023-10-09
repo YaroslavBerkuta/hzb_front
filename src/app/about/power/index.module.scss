@@ -48,3 +48,16 @@
     flex-direction: column;
   }
 }
+
+@media (max-width: 500px) {
+  .item {
+    padding: 25px;
+  }
+  .detail {
+    ul {
+      li {
+        font-size: 15px;
+      }
+    }
+  }
+}

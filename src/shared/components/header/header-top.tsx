@@ -23,7 +23,6 @@ export const HeaderTop: FC<IProps> = ({}) => {
         </>
       );
     } else {
-      console.log("window:", width);
       return (
         <>
           <HeaderContact />

@@ -80,3 +80,26 @@
     margin-top: 50px;
   }
 }
+
+@media (max-width: 500px) {
+  .flex {
+    padding: 15px;
+  }
+  .detail {
+    p {
+      font-size: 18px;
+    }
+  }
+  .contact {
+    h3 {
+      font-size: 20px;
+    }
+    ul {
+      li {
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
