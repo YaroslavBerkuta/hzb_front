@@ -24,6 +24,9 @@ export const Partner = () => {
       ref={sliderRef}
       style={{ position: "relative", overflowY: "visible" }}
       breakpoints={{
+        1680: {
+          slidesPerView: 3,
+        },
         1024: {
           slidesPerView: 2,
         },

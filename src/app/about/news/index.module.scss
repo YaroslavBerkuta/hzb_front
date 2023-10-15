@@ -152,4 +152,20 @@
   .image {
     max-height: 340px;
   }
+  .itemFlex {
+    padding: 0;
+  }
+  .detail {
+    h2 {
+      margin-bottom: 30px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  .share {
+    span {
+      font-size: 16px;
+    }
+  }
 }

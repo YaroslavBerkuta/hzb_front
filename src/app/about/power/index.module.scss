@@ -37,6 +37,7 @@
         height: 5px;
         border-radius: 50%;
         background-color: #4b4b4b;
+        transform: translateY(-50%);
       }
     }
   }
@@ -52,11 +53,13 @@
 @media (max-width: 500px) {
   .item {
     padding: 25px;
+    margin-bottom: 45px;
   }
   .detail {
     ul {
       li {
         font-size: 15px;
+        padding-left: 15px;
       }
     }
   }

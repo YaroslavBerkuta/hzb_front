@@ -121,3 +121,28 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .form {
+    padding: 25px 20px;
+    p {
+      font-size: 30px;
+      margin-top: 15px;
+    }
+  }
+  .main {
+    flex-direction: column;
+    margin-top: 45px;
+    label {
+      max-width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  .flex {
+    flex-direction: column;
+    & > div {
+      max-width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+}

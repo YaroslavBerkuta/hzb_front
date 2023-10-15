@@ -54,3 +54,13 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .desc {
+    padding: 15px;
+    p {
+      font-size: 22px;
+      margin-left: 15px;
+    }
+  }
+}
