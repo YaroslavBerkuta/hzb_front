@@ -21,7 +21,7 @@ const montserrat = Montserrat({ subsets: ["latin", "cyrillic"] });
 
 export default function RootLayout({ children }: IProps) {
   return (
-    <html lang="en" className={montserrat.className}>
+    <html lang="uk" className={montserrat.className}>
       <ContextProvider>
         <body>
           <Header />

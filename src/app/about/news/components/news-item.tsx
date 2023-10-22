@@ -2,17 +2,24 @@ import React, { FC } from "react";
 import Image from "next/image";
 
 import styles from "../index.module.scss";
+import moment from "moment";
 
-interface IProps {}
+interface IProps {
+  title: string;
+  desc: string;
+  img: string;
+  create: string;
+}
 
-export const NewsItem: FC<IProps> = ({}) => {
+export const NewsItem: FC<IProps> = ({ title, desc, img, create }) => {
+  console.log(moment.locale("uk"));
   return (
     <div className={styles.item}>
       <div className="container">
         <div className={styles.itemFlex}>
           <div className={styles.image}>
             <Image
-              src="/blog.png"
+              src={img}
               alt="blog"
               loading="lazy"
               width={800}
@@ -21,21 +28,13 @@ export const NewsItem: FC<IProps> = ({}) => {
           </div>
           <div className={styles.itemDetail}>
             <div className={styles.detail}>
-              <h2>З ДНЕМ БУДІВЕЛЬНИКА!</h2>
-              <p>
-                Бажаємо Вам бути творцями власного життя та побудувати життя
-                своєї мрії! Нехай все в ньому відповідає найвищим стандартам,
-                використовувати тільки надійні та високоякісні матеріали в
-                роботі і в житті! А колектив ТДВ «Хмельницькзалізобетон» завжди
-                радий співпраці та відкритий до нових проектів!В такий не легкий
-                для всіх нас час, бажаємо Вам вдалих угод, творчого натхнення,
-                гарного настрою, щастя, і щоб здоров’я було міцніше за бетон!
-                Мирного неба над головою! Все буде Україна!З повагою, колектив
-                ТДВ «Хмельницькзалізобетон»
-              </p>
+              <h2>{title}</h2>
+              <p>{desc}</p>
             </div>
             <div className={styles.share}>
-              <span>06 грудня 2022</span>
+              <span>
+                {create}
+              </span>
               <ul>
                 <span>Поширити</span>
                 <li>

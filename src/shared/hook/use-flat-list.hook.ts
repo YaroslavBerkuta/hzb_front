@@ -1,13 +1,14 @@
-import _ from "lodash";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { noop } from "lodash";
 import { useState, useRef, useEffect, useMemo } from "react";
 
 interface IProps<T> {
   limit?: number;
   page?: number;
   fetchItems: (...arr: any[]) => any;
-  serrializatorResponse?: <S>(data: S) => S | any;
+  serrializatorResponse?: <S>(data: S) => S;
   serrializatorItems?: (items: ReturnType<IProps<T>["fetchItems"]>) => T[];
-  loadParams?: { [key: string]: string | boolean | number };
+  loadParams?: { [key: string]: string | number | boolean };
   needInit: boolean;
   clearWhenReload?: boolean;
   defaultItems?: T[];
@@ -17,7 +18,7 @@ interface IProps<T> {
 const defaultProps: IProps<any[]> = {
   limit: 20,
   page: 1,
-  fetchItems: () => {} /*  axios request */,
+  fetchItems: noop /*  axios request */,
   serrializatorResponse: (data: any) => data,
   serrializatorItems: (items: any) => items,
   loadParams: {},
@@ -46,7 +47,7 @@ export const useFlatList = <T>(props: IProps<T>) => {
 
   const blockLoadingRef = useRef(false);
 
-  const [items, setItems] = useState<T[] | any>(props.defaultItems);
+  const [items, setItems] = useState<T[]>(props.defaultItems);
   const [totalCount, setTotalCount] = useState(0);
   const [isLoading, setLoading] = useState(props.defaultLoading);
   const [isLoadingNext, setIsLoadingNext] = useState(false);
@@ -67,8 +68,9 @@ export const useFlatList = <T>(props: IProps<T>) => {
     blockLoadingRef.current = true;
     try {
       if (props.clearWhenReload) setItems([]);
-      const response = props?.serrializatorResponse?.(
-        await props.fetchItems(loadParams.current)
+
+      const response = props.serrializatorResponse(
+        await props.fetchItems({ params: loadParams.current })
       );
 
       if (!response) throw {};
@@ -80,8 +82,7 @@ export const useFlatList = <T>(props: IProps<T>) => {
         page: loadParams.current.page + 1,
         count: response.data.count,
       };
-      const fetchedItems: any =
-        props.serrializatorItems?.(response.data.items) || null;
+      const fetchedItems = props.serrializatorItems(response.data.items);
 
       if (firstFetch) setItems(fetchedItems);
       else setItems([...items, ...fetchedItems]);
@@ -90,7 +91,6 @@ export const useFlatList = <T>(props: IProps<T>) => {
 
       if (!isInit) setIsInit(true);
     } catch (e) {
-      console.log(e);
       setItems([]);
     }
 
@@ -99,8 +99,8 @@ export const useFlatList = <T>(props: IProps<T>) => {
     setIsLoadingNext(false);
   };
 
-  const resetFlatList = () => {
-    fetchItems(true);
+  const resetFlatList = async () => {
+    await fetchItems(true);
   };
 
   const loadMore = () => {

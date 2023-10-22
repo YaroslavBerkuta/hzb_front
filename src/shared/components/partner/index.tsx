@@ -36,6 +36,10 @@ export const Partner = () => {
         425: {
           slidesPerView: 1,
         },
+        375: {
+          slidesPerView: 1,
+        },
+        320: { slidesPerView: 1 },
       }}
     >
       <SwiperSlide

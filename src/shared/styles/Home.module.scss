@@ -81,3 +81,18 @@
     }
   }
 }
+
+@media (max-width: 450px) {
+  .heroFlex {
+    h1 {
+      font-size: 20px;
+      letter-spacing: 2px;
+    }
+  }
+  .heroImage {
+    border-radius: 10px;
+    img {
+      border-radius: 10px;
+    }
+  }
+}

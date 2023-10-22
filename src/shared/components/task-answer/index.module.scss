@@ -85,3 +85,24 @@
     }
   }
 }
+
+@media (max-width: 450px) {
+  .item {
+    padding: 0;
+    span {
+      font-size: 16px;
+    }
+  }
+  .flex {
+    padding: 15px 0 0 0;
+    & > div {
+      img {
+        width: 50px;
+        height: 50px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+}

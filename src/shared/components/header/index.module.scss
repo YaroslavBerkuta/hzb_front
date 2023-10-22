@@ -132,6 +132,7 @@
           font-style: normal;
           font-weight: 500;
           line-height: normal;
+          text-transform: uppercase;
         }
       }
     }
@@ -140,5 +141,21 @@
 @media (max-width: 500px) {
   .burger {
     margin-left: 30px;
+  }
+}
+
+@media (max-width: 450px) {
+  .header_logo {
+    img {
+      width: 30px;
+      height: 30px;
+    }
+    span {
+      font-size: 16px;
+      margin-left: 5px;
+    }
+  }
+  .menuActive {
+    top: 85px !important;
   }
 }

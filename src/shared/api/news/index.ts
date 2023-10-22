@@ -1,5 +1,5 @@
-import { api } from "@/shared/config";
+import { http } from "@/shared/config";
 
-export const getList = (params: any): any => {
-  return api.get("publick/news", { params });
+export const getList = (params: any) => {
+  return http.get<any>("public/news", { params });
 };
