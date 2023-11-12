@@ -1,8 +1,8 @@
 import { Breadcrumbs } from "@/shared/components";
 import React from "react";
-import { PowerItem } from "./components";
-
-import styles from "./index.module.scss"
+import { PowerList } from "./components/power-list";
+import { useFlatList } from "@/shared/hook";
+import { productionsApi } from "@/shared/api/power";
 
 export default function Power() {
   return (
@@ -19,12 +19,7 @@ export default function Power() {
               BHS, TEKA, WAINIG, GOMA, HICAS, LE.KO.
             </p>
           </div>
-          <div className={styles.flex}>
-            <PowerItem />
-            <PowerItem />
-            <PowerItem />
-            <PowerItem />
-          </div>
+          <PowerList />
         </div>
       </section>
     </>

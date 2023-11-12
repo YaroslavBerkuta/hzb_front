@@ -1,5 +1,5 @@
 "use client";
-import React, { useCallback, useRef } from "react";
+import React, { FC, useCallback, useRef } from "react";
 import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -7,7 +7,11 @@ import { Pagination } from "swiper/modules";
 
 import styles from "./index.module.scss";
 
-export const Slider = () => {
+interface IProps {
+  slides?: any[];
+}
+
+export const Slider: FC<IProps> = ({ slides }) => {
   const sliderRef = useRef<any>(null);
 
   const handlePrev = useCallback(() => {
@@ -19,6 +23,17 @@ export const Slider = () => {
     if (!sliderRef.current) return;
     sliderRef.current.swiper.slideNext();
   }, []);
+
+  const renderItem = useCallback(
+    (it: string, index: number) => {
+      return (
+        <SwiperSlide key={index}>
+          <Image src={it} width={880} height={680} alt="slide" />
+        </SwiperSlide>
+      );
+    },
+    [slides]
+  );
   return (
     <Swiper
       className={styles.slider}
@@ -30,15 +45,7 @@ export const Slider = () => {
       }}
       ref={sliderRef}
     >
-      <SwiperSlide>
-        <Image src="/slide.png" width={880} height={680} alt="slide" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image src="/slide.png" width={880} height={680} alt="slide" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image src="/slide.png" width={880} height={680} alt="slide" />
-      </SwiperSlide>
+      {slides?.map((it: any, index) => renderItem(it, index))}
       <div className={styles.navigation}>
         <div onClick={handlePrev}>
           <svg

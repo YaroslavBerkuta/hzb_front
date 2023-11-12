@@ -1,22 +1,23 @@
-import React from "react";
+import React, { FC } from "react";
 import styles from "../index.module.scss";
 import { Slider } from "@/shared/components";
 
-export const PowerItem = () => {
+interface IProps {
+  title: string;
+  content: string;
+  images: any[];
+}
+
+export const PowerItem: FC<IProps> = ({ title, content, images }) => {
   return (
     <div className={styles.item}>
       <div className={styles.detail}>
         <div className="sectionTitle">
-          <h2>ЦЕХ №1</h2>
+          <h2>{title}</h2>
         </div>
-        <ul>
-          <li>збірний залізобетон: - 120 тис.м 3</li>
-          <li>плити перекриття - 55 тис.м 3</li>
-          <li>дорожні елементи - 8 тис.м 3</li>
-          <li>палі - 25 тис.м 3</li>
-        </ul>
+        <div dangerouslySetInnerHTML={{ __html: content }}></div>
       </div>
-      <Slider />
+      <Slider slides={images.map((it) => it.fileUrl)} />
     </div>
   );
 };
