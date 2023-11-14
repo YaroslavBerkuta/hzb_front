@@ -6,7 +6,7 @@ import { advantages } from "@/shared/config";
 export const Advantages = () => {
   return (
     <div className={styles.flex}>
-      {advantages.map((it, index) => (
+      {advantages().map((it, index) => (
         <div className={styles.item} key={index}>
           <div>
             <Image src={it.image} width={72} height={72} alt={it.title} />

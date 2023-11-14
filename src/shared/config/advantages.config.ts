@@ -1,24 +1,29 @@
-export const advantages = [
-  {
-    image: "/experience.svg",
-    title: "Досвід",
-    description:
-      "Понад 60 років на ринку Лідерство у галузі виробництва залізобетонних конструкцій Західної України",
-  },
-  {
-    image: "/iso.svg",
-    title: "Контроль якості",
-    description:
-      "Система управління якістю ISO 9001-2015 Акредитована лабораторія Сертифікована продукція",
-  },
-  {
-    image: "/awards.svg",
-    title: "Розгорнута дилерська мережа",
-    description: "Офіційне представництво у семи регіонах України",
-  },
-  {
-    image: "/power.svg",
-    title: "Один з найбільших складів в Україні",
-    description: "Виробничі потужності та складська програма забезпечують постійну наявність серійної продукціі",
-  },
-];
+"use client";
+
+import { useTranslation } from "react-i18next";
+
+export const advantages = () => {
+  const { t } = useTranslation();
+  return [
+    {
+      image: "/experience.svg",
+      title: t("advantage.experience.title"),
+      description: t("advantage.experience.desc"),
+    },
+    {
+      image: "/iso.svg",
+      title: t("advantage.quality.title"),
+      description: t("advantage.quality.desc"),
+    },
+    {
+      image: "/awards.svg",
+      title: t("advantage.chain.title"),
+      description: t("advantage.chain.desc"),
+    },
+    {
+      image: "/power.svg",
+      title: t("advantage.largest.title"),
+      description: t("advantage.largest.desc"),
+    },
+  ];
+};

@@ -15,7 +15,7 @@ export default function Awards() {
     needInit: true,
   });
 
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
 
   return (
     <>
@@ -50,7 +50,10 @@ export default function Awards() {
             ))}
           </div>
           <div className={styles.btn}>
-            <Button onClick={() => loadMore()} text="Дивитись більше" />
+            <Button
+              onClick={() => loadMore()}
+              text={t("shared.element.loadMore")}
+            />
           </div>
         </div>
       </section>

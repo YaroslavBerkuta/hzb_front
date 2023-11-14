@@ -1,8 +1,9 @@
+"use client";
 import React, { FC } from "react";
 import Image from "next/image";
 
 import styles from "../index.module.scss";
-import moment from "moment";
+import { useTranslation } from "react-i18next";
 
 interface IProps {
   title: string;
@@ -12,7 +13,7 @@ interface IProps {
 }
 
 export const NewsItem: FC<IProps> = ({ title, desc, img, create }) => {
-  console.log(moment.locale("uk"));
+  const { t } = useTranslation();
   return (
     <div className={styles.item}>
       <div className="container">
@@ -32,11 +33,9 @@ export const NewsItem: FC<IProps> = ({ title, desc, img, create }) => {
               <p>{desc}</p>
             </div>
             <div className={styles.share}>
-              <span>
-                {create}
-              </span>
+              <span>{create}</span>
               <ul>
-                <span>Поширити</span>
+                <span>{t("shared.element.share")}</span>
                 <li>
                   <a href="">
                     <svg

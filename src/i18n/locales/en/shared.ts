@@ -1,0 +1,26 @@
+export const sharedTranslation = {
+  sectionTitle: {
+    advantages: "ADVANTAGES",
+    partners: "PARTNERS",
+    clients: "OUR CLIENTS",
+    instagram: "INSTAGRAM",
+    question: "QUESTION - ANSWER",
+    contact: "COMPANY CONTACTS",
+    adress: "OUR ADDRESS",
+    labolatory: "TESTING LABORATORY",
+    zbut: "SALES DEPARTMENT",
+    production: "PRODUCTION DEPARTMENT",
+    supply: "SUPPLY DEPARTMENT",
+    accounting: "ACCOUNTING",
+  },
+  element: {
+    btnOrange: "Contact us",
+    goTo: "Go to",
+    share: "Share",
+    loadMore: "Load more",
+    email: "E-mail",
+    phone: "Phone",
+    adress: "Adress",
+    homeTitle: "IN CONSTRUCTION, YOU NEED TO WORK WITH REAL PROFESSIONALS",
+  },
+};

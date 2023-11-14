@@ -4,8 +4,10 @@ import React, { useCallback, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./index.module.scss";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 export const Partner = () => {
+  const { t } = useTranslation();
   const sliderRef = useRef<any>(null);
 
   const handlePrev = useCallback(() => {
@@ -53,7 +55,7 @@ export const Partner = () => {
         </div>
         <div className={styles.detail}>
           <Link className="btn-outline" href="">
-            Перейти
+            {t("shared.element.goTo")}
           </Link>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -73,7 +75,7 @@ export const Partner = () => {
         </div>
         <div className={styles.detail}>
           <Link className="btn-outline" href="">
-            Перейти
+            {t("shared.element.goTo")}
           </Link>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -93,7 +95,7 @@ export const Partner = () => {
         </div>
         <div className={styles.detail}>
           <Link className="btn-outline" href="">
-            Перейти
+            {t("shared.element.goTo")}
           </Link>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -113,7 +115,7 @@ export const Partner = () => {
         </div>
         <div className={styles.detail}>
           <Link className="btn-outline" href="">
-            Перейти
+            {t("shared.element.goTo")}
           </Link>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting

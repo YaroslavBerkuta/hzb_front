@@ -5,25 +5,27 @@ import styles from "./index.module.scss";
 import { Collapse } from "antd";
 import { RightOutlined } from "@ant-design/icons";
 import { FileForm } from "../form";
+import { useTranslation } from "react-i18next";
 
 export const TaskAnswer = () => {
+  const { t } = useTranslation();
   const items = [
     {
       key: "1",
-      label: "Як зробити замовлення?",
+      label: t("question.firstTab.title"),
       children: (
         <div className={styles.flex}>
           <div>
             <Image src="contacts.svg" width={72} height={72} alt="contacts" />
-            <p>Залиште заявку на сайті</p>
+            <p>{t("question.firstTab.el1")}</p>
           </div>
           <div>
             <Image src="dolar.svg" width={72} height={72} alt="dolar" />
-            <p>Консультація й оплата замовлення</p>
+            <p>{t("question.firstTab.el2")}</p>
           </div>
           <div>
             <Image src="devilery.svg" width={72} height={72} alt="devilery" />
-            <p>Доставка</p>
+            <p>{t("question.firstTab.el3")}</p>
           </div>
         </div>
       ),
@@ -31,20 +33,20 @@ export const TaskAnswer = () => {
     },
     {
       key: "2",
-      label: "Які є способи оплати?",
+      label: t("question.secondTab.title"),
       children: (
         <div className={styles.flex}>
           <div>
             <Image src="bank.svg" width={72} height={72} alt="bank" />
-            <p>Банківський переказ</p>
+            <p>{t("question.secondTab.el1")}</p>
           </div>
           <div>
             <Image src="cart.svg" width={72} height={72} alt="cart" />
-            <p>Оплата картою через термінал</p>
+            <p>{t("question.secondTab.el2")}</p>
           </div>
           <div>
             <Image src="money.svg" width={72} height={72} alt="money" />
-            <p>Готівкою в касі підприємства</p>
+            <p>{t("question.secondTab.el3")}</p>
           </div>
         </div>
       ),
@@ -52,20 +54,20 @@ export const TaskAnswer = () => {
     },
     {
       key: "3",
-      label: "Які є варіанти доставки?",
+      label: t("question.thirdTab.title"),
       children: (
         <div className={styles.flex}>
           <div>
             <Image src="car.svg" width={72} height={72} alt="car" />
-            <p>Власне авто</p>
+            <p>{t("question.thirdTab.el1")}</p>
           </div>
           <div>
             <Image src="bus.svg" width={72} height={72} alt="bus" />
-            <p>Транспорт вантажовідправника</p>
+            <p>{t("question.thirdTab.el2")}</p>
           </div>
           <div>
             <Image src="phone.svg" width={72} height={72} alt="phone" />
-            <p>Пошук авто через диспетчера</p>
+            <p>{t("question.thirdTab.el3")}</p>
           </div>
         </div>
       ),
@@ -73,24 +75,24 @@ export const TaskAnswer = () => {
     },
     {
       key: "4",
-      label: "Чому з нами вигідно?",
+      label: t("question.fourTab.title"),
       children: (
         <div className={styles.flex}>
           <div>
             <Image src="system.svg" width={72} height={72} alt="system" />
-            <p>Програми лояльності</p>
+            <p>{t("question.fourTab.el1")}</p>
           </div>
           <div>
             <Image src="dolar.svg" width={72} height={72} alt="dolar" />
-            <p>Система знижок</p>
+            <p>{t("question.fourTab.el2")}</p>
           </div>
           <div>
             <Image src="sun.svg" width={72} height={72} alt="sun" />
-            <p>Сезонні акції</p>
+            <p>{t("question.fourTab.el3")}</p>
           </div>
           <div>
             <Image src="3d.svg" width={72} height={72} alt="phone" />
-            <p>Розпродаж залишків</p>
+            <p>{t("question.fourTab.el4")}</p>
           </div>
         </div>
       ),

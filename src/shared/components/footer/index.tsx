@@ -1,30 +1,33 @@
+"use client";
 import React from "react";
 import stylse from "./index.module.scss";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className={stylse.footer}>
       <div className="container">
         <div className="sectionTitle">
-          <h2>Контакти підприємства</h2>
+          <h2>{t("shared.sectionTitle.contact")}</h2>
         </div>
         <ul className={stylse.contact}>
           <li>
-            <span>Адреса:</span>
+            <span>{t("shared.element.adress")}:</span>
             <p>Україна, 29000, м. Хмельницький, віл. Чорновола, 31</p>
           </li>
           <li>
-            <span>Телефон:</span>
+            <span>{t("shared.element.phone")}:</span>
             <p>+380977262832</p>
           </li>
           <li>
-            <span>E-mail:</span>
+            <span>{t("shared.element.email")}:</span>
             <p>ula-hzb@ukr.net</p>
           </li>
         </ul>
         <ul className={stylse.social}>
-          <Link href={`${process.env.INSTAGRAM_URL}`} target="_blank">
+          <Link href={'https://www.instagram.com/hzb.ukraine/'} target="_blank">
             <svg
               width="15"
               height="15"
@@ -46,7 +49,7 @@ export const Footer = () => {
               />
             </svg>
           </Link>
-          <Link href={`${process.env.FACEBOOK_URL}`} target="_blank">
+          <Link href={'https://www.instagram.com/hzb.ukraine/'} target="_blank">
             <svg
               width="8"
               height="15"

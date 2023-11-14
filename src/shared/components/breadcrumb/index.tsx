@@ -5,8 +5,10 @@ import { useRouter, usePathname } from "next/navigation";
 import { ItemType } from "antd/es/breadcrumb/Breadcrumb";
 
 import styles from "./index.module.scss";
+import { useTranslation } from "react-i18next";
 
 export const Breadcrumbs: FC<{ color?: string }> = ({ color }) => {
+  const { t, i18n } = useTranslation();
   const router = useRouter();
   const pathname = usePathname();
   const [breadcrumbs, setBreadcrumbs] = useState<ItemType[] | null>(null);
@@ -17,14 +19,14 @@ export const Breadcrumbs: FC<{ color?: string }> = ({ color }) => {
 
       const pathArray = linkPath.map((path, i) => {
         return {
-          title: path,
+          title: t(`bread.${path}`),
           href: "/" + linkPath.slice(0, i + 1).join("/"),
           key: path,
         };
       });
       setBreadcrumbs([
         {
-          title: "Головна",
+          title: t(`bread.home`),
           href: "/",
           className: styles.item,
           key: "home",
@@ -32,7 +34,7 @@ export const Breadcrumbs: FC<{ color?: string }> = ({ color }) => {
         ...pathArray,
       ]);
     }
-  }, [router]);
+  }, [router, i18n.language]);
 
   if (!breadcrumbs) {
     return <></>;
