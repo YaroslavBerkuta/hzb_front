@@ -1,0 +1,15 @@
+{
+  "/page": "/",
+  "/favicon.ico/route": "/favicon.ico",
+  "/about/page": "/about",
+  "/about/awards/page": "/about/awards",
+  "/about/labaratory/page": "/about/labaratory",
+  "/about/power/page": "/about/power",
+  "/about/system/page": "/about/system",
+  "/contacts/distribution/page": "/contacts/distribution",
+  "/contacts/main/page": "/contacts/main",
+  "/about/project/page": "/about/project",
+  "/about/news/page": "/about/news",
+  "/about/news/[id]/page": "/about/news/[id]",
+  "/about/project/[id]/page": "/about/project/[id]"
+}
