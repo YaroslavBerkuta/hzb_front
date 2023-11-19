@@ -8,8 +8,8 @@
   "/about/system/page": "app/about/system/page.js",
   "/contacts/distribution/page": "app/contacts/distribution/page.js",
   "/contacts/main/page": "app/contacts/main/page.js",
-  "/about/project/page": "app/about/project/page.js",
   "/about/news/page": "app/about/news/page.js",
+  "/about/project/page": "app/about/project/page.js",
   "/about/news/[id]/page": "app/about/news/[id]/page.js",
   "/about/project/[id]/page": "app/about/project/[id]/page.js"
 }

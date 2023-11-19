@@ -8,8 +8,8 @@
   "/about/system/page": "/about/system",
   "/contacts/distribution/page": "/contacts/distribution",
   "/contacts/main/page": "/contacts/main",
-  "/about/project/page": "/about/project",
   "/about/news/page": "/about/news",
+  "/about/project/page": "/about/project",
   "/about/news/[id]/page": "/about/news/[id]",
   "/about/project/[id]/page": "/about/project/[id]"
 }
