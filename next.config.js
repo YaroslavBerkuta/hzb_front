@@ -5,7 +5,6 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, "src/shared/styles")],
   },
-  output: 'export',
   images: {
     remotePatterns: [
       {
