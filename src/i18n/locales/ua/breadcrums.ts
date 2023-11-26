@@ -10,4 +10,5 @@ export const breadcrumsTranslate = {
   contacts: "Контакти",
   main: "Основні",
   distribution: "Дистрибютори",
+  catalog: "Каталог",
 };

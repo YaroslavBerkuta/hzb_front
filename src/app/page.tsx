@@ -80,7 +80,7 @@ function Home() {
             <h2>{t("shared.sectionTitle.instagram")}</h2>
             <Link
               className="btn-outline outline-gray"
-              href={'https://www.instagram.com/hzb.ukraine/'}
+              href={"https://www.instagram.com/hzb.ukraine/"}
               target="_blank"
             >
               {t("shared.element.goTo")}

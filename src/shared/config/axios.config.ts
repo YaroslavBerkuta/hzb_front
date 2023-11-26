@@ -52,3 +52,4 @@ export const http = {
   delete: <T>(url: string, params?: AxiosRequestConfig) =>
     request<T>(() => axiosInstance.delete<T>(url, params)),
 };
+

@@ -1,15 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { FC } from "react";
 
-import styles from "./index.module.scss"
+import styles from "./index.module.scss";
 
-export const InstagramPost = () => {
+interface IProps {
+  url: string;
+}
+
+export const InstagramPost: FC<IProps> = ({ url }) => {
   return (
     <Link href="" className={styles.item}>
       <Image
-        src="/client.png"
-        alt=""
+        src={url}
+        alt="post"
         loading="lazy"
         layout="fill"
         objectFit="cover"

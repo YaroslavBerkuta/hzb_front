@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { FC, useCallback, useEffect, useState } from "react";
+import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { HeaderContact, HeaderNavigation } from "../navigation";
 import styles from "./index.module.scss";
@@ -14,7 +14,7 @@ export const HeaderTop: FC<IProps> = ({}) => {
     setWidth(window.innerWidth);
   }, []);
 
-  const renderMenu = useCallback(() => {
+  const renderMenu = useMemo(() => {
     if (width > 768) {
       return (
         <>
@@ -43,7 +43,7 @@ export const HeaderTop: FC<IProps> = ({}) => {
               залізобетон
             </span>
           </Link>
-          {renderMenu()}
+          {renderMenu}
         </div>
       </div>
     </div>

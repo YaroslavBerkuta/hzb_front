@@ -17,37 +17,37 @@ export interface IHeaderMenu {
 export const menuConfig = (): IHeaderMenu[] => {
   const { t } = useTranslation();
   return [
-    // {
-    //   label: t("nav.catalog.label"),
-    //   key: "catalog",
-    //   link: null,
-    //   children: [
-    //     {
-    //       label: "Залізобетонні вироби",
-    //       key: "zb",
-    //       link: "/",
-    //       image: "/zb.svg",
-    //     },
-    //     {
-    //       label: "Бетони та розчини",
-    //       key: "beton",
-    //       link: "/",
-    //       image: "/beton.svg",
-    //     },
-    //     {
-    //       label: "Столярні вироби",
-    //       key: "stolar",
-    //       link: "/",
-    //       image: "/stolar.svg",
-    //     },
-    //     {
-    //       label: "3D Моделі",
-    //       key: "3d",
-    //       link: "/",
-    //       image: "/3d.svg",
-    //     },
-    //   ],
-    // },
+    {
+      label: t("nav.catalog.label"),
+      key: "catalog",
+      link: null,
+      children: [
+        {
+          label: "Залізобетонні вироби",
+          key: "zb",
+          link: "/catalog",
+          image: "/zb.svg",
+        },
+        {
+          label: "Бетони та розчини",
+          key: "beton",
+          link: "/catalog",
+          image: "/beton.svg",
+        },
+        {
+          label: "Столярні вироби",
+          key: "stolar",
+          link: "/catalog",
+          image: "/stolar.svg",
+        },
+        {
+          label: "3D Моделі",
+          key: "3d",
+          link: "/catalog",
+          image: "/3d.svg",
+        },
+      ],
+    },
     {
       label: t("nav.about.label"),
       key: "about",
