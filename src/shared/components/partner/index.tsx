@@ -5,9 +5,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./index.module.scss";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
+import { useFlatList } from "@/shared/hook";
+import { getPartners } from "@/shared/api/partners";
+import { getTranslate } from "@/shared/helpers";
 
 export const Partner = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const sliderRef = useRef<any>(null);
 
   const handlePrev = useCallback(() => {
@@ -19,6 +22,13 @@ export const Partner = () => {
     if (!sliderRef.current) return;
     sliderRef.current.swiper.slideNext();
   }, []);
+
+  const { items } = useFlatList({
+    fetchItems: getPartners,
+    needInit: true,
+    limit: 10,
+  });
+
   return (
     <Swiper
       spaceBetween={24}
@@ -44,86 +54,28 @@ export const Partner = () => {
         320: { slidesPerView: 1 },
       }}
     >
-      <SwiperSlide
-        style={{
-          background: `linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), center / cover no-repeat url('/main.png'), lightgray -442.415px 0px / 274.155% 166.667% no-repeat`,
-        }}
-        className={styles.item}
-      >
-        <div className={styles.title}>
-          <h3>Гармонія</h3>
-        </div>
-        <div className={styles.detail}>
-          <Link className="btn-outline" href="">
-            {t("shared.element.goTo")}
-          </Link>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s
-          </p>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide
-        style={{
-          background: `linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), center / cover no-repeat url('/main.png'), lightgray -442.415px 0px / 274.155% 166.667% no-repeat`,
-        }}
-        className={styles.item}
-      >
-        <div className={styles.title}>
-          <h3>Гармонія</h3>
-        </div>
-        <div className={styles.detail}>
-          <Link className="btn-outline" href="">
-            {t("shared.element.goTo")}
-          </Link>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s
-          </p>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide
-        style={{
-          background: `linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), center / cover no-repeat url('/main.png'), lightgray -442.415px 0px / 274.155% 166.667% no-repeat`,
-        }}
-        className={styles.item}
-      >
-        <div className={styles.title}>
-          <h3>Гармонія</h3>
-        </div>
-        <div className={styles.detail}>
-          <Link className="btn-outline" href="">
-            {t("shared.element.goTo")}
-          </Link>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s
-          </p>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide
-        style={{
-          background: `linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), center / cover no-repeat url('/main.png'), lightgray -442.415px 0px / 274.155% 166.667% no-repeat`,
-        }}
-        className={styles.item}
-      >
-        <div className={styles.title}>
-          <h3>Гармонія</h3>
-        </div>
-        <div className={styles.detail}>
-          <Link className="btn-outline" href="">
-            {t("shared.element.goTo")}
-          </Link>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s
-          </p>
-        </div>
-      </SwiperSlide>
+      {items.map((it: any) => (
+        <SwiperSlide
+          key={it.id}
+          style={{
+            background: `linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), center / cover no-repeat url(${it.cover[0].fileUrl}), lightgray -442.415px 0px / 274.155% 166.667% no-repeat`,
+          }}
+          className={styles.item}
+        >
+          <div className={styles.title}>
+            <h3>{getTranslate<any>(it.translations, i18n.language)?.name}</h3>
+          </div>
+          <div className={styles.detail}>
+            <Link className="btn-outline" href={it?.link}>
+              {t("shared.element.goTo")}
+            </Link>
+            <p>
+              {getTranslate<any>(it.translations, i18n.language)?.description}
+            </p>
+          </div>
+        </SwiperSlide>
+      ))}
+
       <div className={styles.navigation}>
         <div onClick={handlePrev}>
           <svg
