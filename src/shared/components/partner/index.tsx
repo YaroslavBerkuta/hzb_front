@@ -4,6 +4,7 @@ import React, { useCallback, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./index.module.scss";
 import Link from "next/link";
+import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { useFlatList } from "@/shared/hook";
 import { getPartners } from "@/shared/api/partners";
@@ -55,23 +56,22 @@ export const Partner = () => {
       }}
     >
       {items.map((it: any) => (
-        <SwiperSlide
-          key={it.id}
-          style={{
-            background: `linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), center / cover no-repeat url(${it.cover[0].fileUrl}), lightgray -442.415px 0px / 274.155% 166.667% no-repeat`,
-          }}
-          className={styles.item}
-        >
-          <div className={styles.title}>
-            <h3>{getTranslate<any>(it.translations, i18n.language)?.name}</h3>
+        <SwiperSlide key={it.id} className={styles.item}>
+          <div className={styles.img}>
+            <Image src={it.cover[0].fileUrl} alt={it.id} fill />
           </div>
-          <div className={styles.detail}>
-            <Link className="btn-outline" href={it?.link}>
-              {t("shared.element.goTo")}
-            </Link>
-            <p>
-              {getTranslate<any>(it.translations, i18n.language)?.description}
-            </p>
+          <div className={styles.info}>
+            <div className={styles.title}>
+              <h3>{getTranslate<any>(it.translations, i18n.language)?.name}</h3>
+            </div>
+            <div className={styles.detail}>
+              <Link className="btn-outline" href={it?.link}>
+                {t("shared.element.goTo")}
+              </Link>
+              <p>
+                {getTranslate<any>(it.translations, i18n.language)?.description}
+              </p>
+            </div>
           </div>
         </SwiperSlide>
       ))}
