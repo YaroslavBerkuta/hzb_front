@@ -36,25 +36,21 @@ export default function Distribution() {
                     "Дистрибютора не знайдено"}
                 </h2>
               </div>
-              <p>
+              {/* <p>
                 {
                   getTranslate<any>(data?.translations, i18n.language)
                     ?.description
                 }
-              </p>
-              {/* <div className={styles.contact}>
+              </p> */}
+              <div className={styles.contact}>
                 <h3>Контакти</h3>
-                <ul>
-                  <li>
-                    <p>Алексієнко Олег Іванович</p>
-                    <span>(0432) 51-13-20, (067)431-58-00</span>
-                  </li>
-                  <li>
-                    <p>Попич Юрій Іванович</p>
-                    <span>(067)440-74-83</span>
-                  </li>
-                </ul>
-              </div> */}
+                <ul
+                  dangerouslySetInnerHTML={{
+                    __html: getTranslate<any>(data?.translations, i18n.language)
+                      ?.description,
+                  }}
+                ></ul>
+              </div>
             </div>
             <div className={styles.mapWrapper}>
               <Map setKey={(id: string) => setKey(id)} />
