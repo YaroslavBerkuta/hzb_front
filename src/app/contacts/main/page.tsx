@@ -115,6 +115,10 @@ export default function Main() {
                   <span>{t("shared.element.email")}:</span>
                   <p>ula-hzb@ukr.net</p>
                 </li>
+                <li>
+                  <span>{t("shared.element.reception")}:</span>
+                  <p>(0382) 64-43-96, (0382) 64-43-58</p>
+                </li>
               </ul>
             </div>
             <div>
@@ -133,32 +137,36 @@ export default function Main() {
                 <h2>{t("shared.sectionTitle.zbut")}</h2>
               </div>
               <ul className={styles.contact}>
+                <li>
+                  <span>{t("shared.element.phone")}:</span>
+                  <p>(0382) 64-30-25, 64-36-03</p>
+                </li>
                 <span>Сергій</span>
+                <li>
+                  <span>{t("shared.element.phone")}:</span>
+                  <p>+380969176074</p>
+                </li>
+                <li>
+                  <span>{t("shared.element.email")}:</span>
+                  <p>s_hzb@ukr.net</p>
+                </li>
+                <span>Марина</span>
                 <li>
                   <span>{t("shared.element.phone")}:</span>
                   <p>+380988671678</p>
                 </li>
                 <li>
                   <span>{t("shared.element.email")}:</span>
-                  <p>skhzb.zbut@gmail.com</p>
-                </li>
-                <span>Марина</span>
-                <li>
-                  <span>{t("shared.element.phone")}:</span>
-                  <p>+380969176074</p>
-                </li>
-                <li>
-                  <span>{t("shared.element.email")}:</span>
-                  <p>skhzb.zbut@gmail.com</p>
+                  <p>mhzb.zbut@gmail.com</p>
                 </li>
                 <span>Вячеслав</span>
                 <li>
                   <span>{t("shared.element.phone")}:</span>
-                  <p>+380969176074</p>
+                  <p>+380674950275</p>
                 </li>
                 <li>
                   <span>{t("shared.element.email")}:</span>
-                  <p>skhzb.zbut@gmail.com</p>
+                  <p>v-hzb@ukr.net</p>
                 </li>
               </ul>
             </div>
@@ -181,20 +189,12 @@ export default function Main() {
                 <span>Дмитро</span>
                 <li>
                   <span>{t("shared.element.phone")}:</span>
-                  <p>+380988671678</p>
-                </li>
-                <li>
-                  <span>{t("shared.element.email")}:</span>
-                  <p>skhzb.zbut@gmail.com</p>
+                  <p>+380964529572</p>
                 </li>
                 <span>Микола</span>
                 <li>
                   <span>{t("shared.element.phone")}:</span>
-                  <p>+380969176074</p>
-                </li>
-                <li>
-                  <span>{t("shared.element.email")}:</span>
-                  <p>skhzb.zbut@gmail.com</p>
+                  <p>+380977013673</p>
                 </li>
               </ul>
             </div>
@@ -206,6 +206,33 @@ export default function Main() {
                 <li>
                   <span>{t("shared.element.phone")}:</span>
                   <p>(0382) 64-43-69</p>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div className="sectionTitle">
+                <h2>{t("shared.sectionTitle.concrete")}</h2>
+              </div>
+              <ul className={styles.contact}>
+                <li>
+                  <span>{t("shared.element.phone")}:</span>
+                  <p>(0382) 64-52-62</p>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div className="sectionTitle">
+                <h2>{t("shared.sectionTitle.tree")}</h2>
+              </div>
+              <ul className={styles.contact}>
+                <span>Наталія</span>
+                <li>
+                  <span>{t("shared.element.phone")}:</span>
+                  <p>(0382) 64-51-36, +380972650110</p>
+                </li>
+                <li>
+                  <span>{t("shared.element.email")}:</span>
+                  <p>zbuthzb.st@gmail.com</p>
                 </li>
               </ul>
             </div>

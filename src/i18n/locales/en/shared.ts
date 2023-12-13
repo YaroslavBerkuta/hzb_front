@@ -12,6 +12,8 @@ export const sharedTranslation = {
     production: "PRODUCTION DEPARTMENT",
     supply: "SUPPLY DEPARTMENT",
     accounting: "ACCOUNTING",
+    concrete: "Concretes and mortars",
+    tree: "Wood products",
   },
   element: {
     btnOrange: "Contact us",
@@ -21,6 +23,7 @@ export const sharedTranslation = {
     email: "E-mail",
     phone: "Phone",
     adress: "Adress",
+    reception: "Reception",
     homeTitle: "IN CONSTRUCTION, YOU NEED TO WORK WITH REAL PROFESSIONALS",
   },
 };

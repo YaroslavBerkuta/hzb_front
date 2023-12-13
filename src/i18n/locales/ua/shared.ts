@@ -12,6 +12,8 @@ export const sharedTranslation = {
     production: "ВИРОБНИЧИЙ ВІДДІЛ",
     supply: "ВІДДІЛ ПОСТАЧАННЯ",
     accounting: "БУХГАЛТЕРІЯ",
+    concrete: "Бетони та розчини",
+    tree: "Вироби з деревини",
   },
   element: {
     btnOrange: "Зв’язатись з нами",
@@ -21,6 +23,7 @@ export const sharedTranslation = {
     email: "E-mail",
     phone: "Телефон",
     adress: "Адреса",
+    reception: "Приймальня",
     homeTitle:
       "В СПРАВІ БУДІВНИЦТВА ПОТРІБНО ПРАЦЮВАТИ З СПРАВЖНІМИ ПРОФЕСІОНАЛАМИ",
   },
