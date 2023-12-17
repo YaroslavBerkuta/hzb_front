@@ -47,6 +47,7 @@ export const Breadcrumbs: FC<{ color?: string }> = ({ color }) => {
           items={breadcrumbs.map((it: ItemType, index: number) => ({
             key: it.key,
             title: it.title,
+            href: it.href,
             className: color ? styles.itemWhite : styles.item,
           }))}
         />

@@ -14,6 +14,8 @@ export const sharedTranslation = {
     accounting: "БУХГАЛТЕРІЯ",
     concrete: "Бетони та розчини",
     tree: "Вироби з деревини",
+    about: "Про нас",
+    history: "Наша історія",
   },
   element: {
     btnOrange: "Зв’язатись з нами",

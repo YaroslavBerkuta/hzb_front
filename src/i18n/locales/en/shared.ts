@@ -14,6 +14,8 @@ export const sharedTranslation = {
     accounting: "ACCOUNTING",
     concrete: "Concretes and mortars",
     tree: "Wood products",
+    about: "About us",
+    history: "Our story",
   },
   element: {
     btnOrange: "Contact us",

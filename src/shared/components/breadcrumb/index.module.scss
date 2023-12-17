@@ -8,12 +8,15 @@
 }
 
 .itemWhite {
-  color: white;
+  color: white!important;
   font-size: 21px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   text-transform: uppercase;
+  a {
+    color: white;
+  }
 }
 
 .flex {
