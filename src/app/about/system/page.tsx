@@ -34,13 +34,17 @@ export default function System() {
                         ?.description
                     }
                   </p>
-                  {/* <a href="" download={true}>
+                  <a
+                    href={it.cover[0].fileUrl}
+                    download={it.cover[0].fileName}
+                    target='_blank'
+                  >
                     Завантажити сертифікати
                     <DownloadOutlined
                       color="black"
                       style={{ marginLeft: "10px" }}
                     />
-                  </a> */}
+                  </a>
                 </div>
                 <Slider slides={it.cover.map((it: any) => it.fileUrl)} />
               </div>

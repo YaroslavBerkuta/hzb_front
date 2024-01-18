@@ -17,7 +17,7 @@ export const LabolatoryItem: FC<IProsp> = ({ title, description, images }) => {
         <div className="sectionTitle">
           <h2>{title}</h2>
         </div>
-        <p>{description}</p>
+        <div dangerouslySetInnerHTML={{ __html: description }} />
         {/* <a href="" download={true}>
           Завантажити сертифікати
           <DownloadOutlined color="black" style={{ marginLeft: "10px" }} />

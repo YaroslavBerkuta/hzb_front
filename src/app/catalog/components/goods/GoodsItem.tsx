@@ -1,22 +1,29 @@
-import React from "react";
+import React, { FC } from "react";
 
 import styles from "./index.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 
-export const GoodsItem = () => {
+interface IProps {
+  name: string;
+  image: string;
+  atribute: string;
+  id: number;
+}
+
+export const GoodsItem: FC<IProps> = ({ name, image, atribute, id }) => {
   return (
     <div className={styles.item}>
       <div className={styles.content}>
-        <h2>Плити перекриття</h2>
+        <h2>{name}</h2>
         <div className={styles.img}>
-          <Image src={"/about.png"} alt={"product"} layout="fill" />
+          <Image src={image} alt={name} layout="fill" />
         </div>
-        <div className={styles.detail}>
-          <span>B 1200 мм</span>
-          <span>H 220 мм</span>
-        </div>
-        <Link href="/product/1" className="btn-outline outline-gray">
+        <div
+          className={styles.detail}
+          dangerouslySetInnerHTML={{ __html: atribute }}
+        />
+        <Link href={`/product/${id}`} className="btn-outline outline-gray">
           Детальніше
         </Link>
       </div>

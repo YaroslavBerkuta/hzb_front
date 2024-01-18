@@ -20,6 +20,7 @@ export const HeaderLink: FC<IProps> = ({ it, className, onClick, query }) => {
       key={it.key}
       className={className(it.key)}
       onClick={() => onClick(it.key)}
+      onMouseEnter={() => !it.image && onClick(it.key)}
     >
       {it.image && (
         <Image src={it.image} width={72} height={72} alt={it.label} />
@@ -27,7 +28,10 @@ export const HeaderLink: FC<IProps> = ({ it, className, onClick, query }) => {
       {it.label}
     </Link>
   ) : (
-    <li className={className(it.key)} onClick={() => onClick(it.key)}>
+    <li
+      className={className(it.key)}
+      onMouseEnter={() => !it.image && onClick(it.key)}
+    >
       {it.image && (
         <Image src={it.image} width={72} height={72} alt={it.label} />
       )}

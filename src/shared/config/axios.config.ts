@@ -2,6 +2,7 @@ import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 
 export const axiosInstance = axios.create({
   baseURL: "https://api.hzb.com.ua",
+  // baseURL: "http://localhost:3000",
   headers: {
     "Content-Type": "application/json",
     "Access-Control-Allow-Origin": "*",
@@ -52,4 +53,3 @@ export const http = {
   delete: <T>(url: string, params?: AxiosRequestConfig) =>
     request<T>(() => axiosInstance.delete<T>(url, params)),
 };
-

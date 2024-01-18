@@ -58,7 +58,7 @@ export const menuConfig = (): IHeaderMenu[] => {
     {
       label: t("nav.about.label"),
       key: "about",
-      link: null,
+      link: "/about",
       children: [
         {
           label: t("nav.about.el1"),
@@ -101,7 +101,7 @@ export const menuConfig = (): IHeaderMenu[] => {
     {
       label: t("nav.contact.label"),
       key: "contact",
-      link: null,
+      link: "/contacts",
       children: [
         {
           label: t("nav.contact.el1"),

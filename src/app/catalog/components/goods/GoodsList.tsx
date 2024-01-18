@@ -4,6 +4,8 @@ import { GoodsItem } from "./GoodsItem";
 
 import styles from "./index.module.scss";
 import { Pagination, Select } from "antd";
+import { getTranslate } from "@/shared/helpers";
+import { useTranslation } from "react-i18next";
 
 interface IProps {
   items: any[];
@@ -12,6 +14,7 @@ interface IProps {
 }
 
 export const GoodsList: FC<IProps> = ({ items, count, setParams }) => {
+  const { i18n } = useTranslation();
   return (
     <div className={styles.container}>
       <div className={styles.controls}>
@@ -30,7 +33,15 @@ export const GoodsList: FC<IProps> = ({ items, count, setParams }) => {
       </div>
       <div className={styles.flex}>
         {items?.map((it: any) => (
-          <GoodsItem key={it.id} />
+          <GoodsItem
+            key={it.id}
+            id={it.id}
+            name={getTranslate<any>(it?.translations, i18n.language)?.name}
+            image={it?.cover[0]?.fileUrl}
+            atribute={
+              getTranslate<any>(it?.translations, i18n.language)?.previewHtml
+            }
+          />
         ))}
       </div>
       <Pagination
