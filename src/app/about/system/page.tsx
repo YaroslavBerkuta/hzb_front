@@ -35,9 +35,10 @@ export default function System() {
                     }
                   </p>
                   <a
-                    href={it.cover[0].fileUrl}
-                    download={it.cover[0].fileName}
-                    target='_blank'
+                    href={
+                      "https://drive.google.com/drive/folders/1CfsnA3taaPF_zxbM0jL8MZ0ab3JxAwnD?usp=sharing"
+                    }
+                    target="_blank"
                   >
                     Завантажити сертифікати
                     <DownloadOutlined
