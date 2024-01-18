@@ -144,7 +144,6 @@ export default function Main() {
                     (0382)643025, (0382)643603, +380969176074, +380988671678
                   </p>
                 </li>
-                <span>Сергій</span>
                 <li>
                   <span>{t("shared.element.phone")}:</span>
                   <p>+380969176074</p>
@@ -153,7 +152,6 @@ export default function Main() {
                   <span>{t("shared.element.email")}:</span>
                   <p>s_hzb@ukr.net</p>
                 </li>
-                <span>Марина</span>
                 <li>
                   <span>{t("shared.element.phone")}:</span>
                   <p>+380988671678</p>
@@ -162,7 +160,6 @@ export default function Main() {
                   <span>{t("shared.element.email")}:</span>
                   <p>mhzb.zbut@gmail.com</p>
                 </li>
-                <span>Вячеслав</span>
                 <li>
                   <span>{t("shared.element.phone")}:</span>
                   <p>+380674950275</p>
