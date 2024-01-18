@@ -15,7 +15,7 @@ export const Footer = () => {
         <ul className={stylse.contact}>
           <li>
             <span>{t("shared.element.adress")}:</span>
-            <p>Україна, 29000, м. Хмельницький, віл. Чорновола, 31</p>
+            <p>Україна, 29010, м. Хмельницький, вул. Чорновола, 31</p>
           </li>
           <li>
             <span>{t("shared.element.phone")}:</span>

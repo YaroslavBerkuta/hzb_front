@@ -8,6 +8,12 @@ html {
   scroll-behavior: smooth;
 }
 
+:where(.css-dev-only-do-not-override-1ck3jst).ant-pagination
+  .ant-pagination-item-active
+  a {
+  color: #fd7a19 !important;
+}
+
 body {
   background-color: #f9f9f9;
 }

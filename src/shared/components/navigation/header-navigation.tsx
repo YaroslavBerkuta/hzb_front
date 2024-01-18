@@ -30,14 +30,16 @@ export const HeaderNavigation = () => {
   return (
     <nav>
       <ul className={styles.menu}>
-        {menuConfig().map((it) => (
-          <HeaderLink
-            key={it.key}
-            it={it}
-            className={linkStyle}
-            onClick={onClick}
-          />
-        ))}
+        {menuConfig().map((it) => {
+          return (
+            <HeaderLink
+              key={it.key}
+              it={it}
+              className={linkStyle}
+              onClick={onClick}
+            />
+          );
+        })}
       </ul>
     </nav>
   );

@@ -1,15 +1,18 @@
 "use client";
 import { useTranslation } from "react-i18next";
+import { CatalogTypes } from "../types";
 
 export interface IHeaderMenu {
   label: string;
   key: string;
   link: string | null;
+  query?: any;
   children?: {
     label: string;
     key: string;
     link: string;
     image?: string;
+    query?: any;
   }[];
   image?: string;
 }
@@ -27,24 +30,28 @@ export const menuConfig = (): IHeaderMenu[] => {
           key: "zb",
           link: "/catalog",
           image: "/zb.svg",
+          query: { parent: CatalogTypes.RPS },
         },
         {
           label: "Бетони та розчини",
           key: "beton",
           link: "/catalog",
           image: "/beton.svg",
+          query: { parent: CatalogTypes.CAM },
         },
         {
           label: "Столярні вироби",
           key: "stolar",
           link: "/catalog",
           image: "/stolar.svg",
+          query: { parent: CatalogTypes.CP },
         },
         {
           label: "3D Моделі",
           key: "3d",
           link: "/catalog",
           image: "/3d.svg",
+          query: { parent: CatalogTypes.DM },
         },
       ],
     },

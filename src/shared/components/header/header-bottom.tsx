@@ -22,6 +22,7 @@ export const HeaderBottom = () => {
                   it={it}
                   className={() => {}}
                   onClick={() => setActiveMenuKey(null)}
+                  query={it.query}
                 />
               ))}
             </ul>

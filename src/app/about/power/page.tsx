@@ -1,8 +1,6 @@
 import { Breadcrumbs } from "@/shared/components";
 import React from "react";
 import { PowerList } from "./components/power-list";
-import { useFlatList } from "@/shared/hook";
-import { productionsApi } from "@/shared/api/power";
 
 export default function Power() {
   return (
@@ -20,6 +18,18 @@ export default function Power() {
             </p>
           </div>
           <PowerList />
+          <div className="sectionTitle">
+            <p>
+              Фахівці ТДВ «Хмельницькзалізобетон» постійно адаптовують нові
+              технології до вимог українських норм, підбирають необхідні
+              рецептури бетону, ретельно виконують розрахунок арматури та
+              сипучих. І якрезультат, це досягнення високої якості продукції, що
+              забезпечує конкурентну роботу підприємства. На сьогоднішній день
+              на нашому підприємстві представлений широкий спектр залізобетонних
+              ібетонних виробів, товарних бетонів і розчинів, та столярної
+              продукції.
+            </p>
+          </div>
         </div>
       </section>
     </>

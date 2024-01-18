@@ -1,24 +1,38 @@
+"use client";
 import { Breadcrumbs } from "@/shared/components";
-import React from "react";
+import React, { useEffect } from "react";
 
-import styles from "./index.module.scss";
-import Link from "next/link";
+import { GoodsList, SubCategoriesList } from "./components";
+import { useFlatList } from "@/shared/hook";
+import { productApi } from "@/shared/api/products";
 
-export default function Catalog() {
+export default function Catalog({ searchParams }: { searchParams: any }) {
+  const { items, count, setLoadParams, resetFlatList } = useFlatList<any>({
+    fetchItems: productApi.getLis,
+    needInit: true,
+    loadParams: {
+      categoryKey: searchParams.parent,
+    },
+  });
+
+  useEffect(() => {
+    resetFlatList();
+  }, [searchParams.parent]);
+
   return (
     <>
-      {/* <Breadcrumbs /> */}
-      <section className={styles.bg}>
+      <Breadcrumbs />
+      <section>
         <div className="container">
-          <div className={styles.notFound}>
-            <h1>
-              Сайт знаходиться на стадії розробки. Каталог продукції тимчасово
-              недоступний
-            </h1>
-            <Link className="btn" href={"/"}>
-              На головну
-            </Link>
-          </div>
+          <SubCategoriesList
+            parentCat={searchParams.parent}
+            setCat={(val) => setLoadParams(val)}
+          />
+          <GoodsList
+            items={items}
+            count={count}
+            setParams={(val) => setLoadParams(val)}
+          />
         </div>
       </section>
     </>

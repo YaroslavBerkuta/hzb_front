@@ -113,11 +113,11 @@ export default function Main() {
                 </li>
                 <li>
                   <span>{t("shared.element.email")}:</span>
-                  <p>ula-hzb@ukr.net</p>
+                  <p>xmbeton@gmail.com</p>
                 </li>
                 <li>
                   <span>{t("shared.element.reception")}:</span>
-                  <p>(0382) 64-43-96, (0382) 64-43-58</p>
+                  <p>(0382)644396, (0382)644358</p>
                 </li>
               </ul>
             </div>
@@ -128,7 +128,7 @@ export default function Main() {
               <ul className={styles.contact}>
                 <li>
                   <span>{t("shared.element.phone")}:</span>
-                  <p>(0382) 64-32-05</p>
+                  <p>(0382)643205, +380978639352</p>
                 </li>
               </ul>
             </div>
@@ -137,9 +137,12 @@ export default function Main() {
                 <h2>{t("shared.sectionTitle.zbut")}</h2>
               </div>
               <ul className={styles.contact}>
+                <span>Залізобетонні вироби</span>
                 <li>
                   <span>{t("shared.element.phone")}:</span>
-                  <p>(0382) 64-30-25, 64-36-03</p>
+                  <p>
+                    (0382)643025, (0382)643603, +380969176074, +380988671678
+                  </p>
                 </li>
                 <span>Сергій</span>
                 <li>
@@ -177,7 +180,7 @@ export default function Main() {
               <ul className={styles.contact}>
                 <li>
                   <span>{t("shared.element.phone")}:</span>
-                  <p>(0382) 64-43-55</p>
+                  <p>(0382)644355, +380673113632</p>
                 </li>
               </ul>
             </div>
@@ -186,15 +189,9 @@ export default function Main() {
                 <h2>{t("shared.sectionTitle.supply")}</h2>
               </div>
               <ul className={styles.contact}>
-                <span>Дмитро</span>
                 <li>
                   <span>{t("shared.element.phone")}:</span>
-                  <p>+380964529572</p>
-                </li>
-                <span>Микола</span>
-                <li>
-                  <span>{t("shared.element.phone")}:</span>
-                  <p>+380977013673</p>
+                  <p>(0382)645300, +380964529572, +380977013673</p>
                 </li>
               </ul>
             </div>
@@ -205,7 +202,7 @@ export default function Main() {
               <ul className={styles.contact}>
                 <li>
                   <span>{t("shared.element.phone")}:</span>
-                  <p>(0382) 64-43-69</p>
+                  <p>(0382)644369, +380975401087, +380974890838</p>
                 </li>
               </ul>
             </div>
@@ -216,7 +213,9 @@ export default function Main() {
               <ul className={styles.contact}>
                 <li>
                   <span>{t("shared.element.phone")}:</span>
-                  <p>(0382) 64-52-62</p>
+                  <p>
+                    (0382)645262, +380967875437, +380985060240, +380673811183
+                  </p>
                 </li>
               </ul>
             </div>
@@ -225,14 +224,35 @@ export default function Main() {
                 <h2>{t("shared.sectionTitle.tree")}</h2>
               </div>
               <ul className={styles.contact}>
-                <span>Наталія</span>
                 <li>
                   <span>{t("shared.element.phone")}:</span>
-                  <p>(0382) 64-51-36, +380972650110</p>
+                  <p>(0382)645136, +380987377278</p>
                 </li>
                 <li>
                   <span>{t("shared.element.email")}:</span>
                   <p>zbuthzb.st@gmail.com</p>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div className="sectionTitle">
+                <h2>ЗАСТУПНИК КЕРІВНИКА ВІДДІЛУ ЗБУТУ</h2>
+              </div>
+              <ul className={styles.contact}>
+                <li>
+                  <span>{t("shared.element.phone")}:</span>
+                  <p>+380674950275</p>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div className="sectionTitle">
+                <h2>КЕРІВНИК ВІДДІЛУ ЗБУТУ</h2>
+              </div>
+              <ul className={styles.contact}>
+                <li>
+                  <span>{t("shared.element.phone")}:</span>
+                  <p>+380672772202</p>
                 </li>
               </ul>
             </div>
