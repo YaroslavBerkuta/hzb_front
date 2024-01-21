@@ -59,7 +59,7 @@ export const useFlatList = <T>(props: IProps<T>) => {
 
     if (firstFetch) {
       setLoading(true);
-      loadParams.current.page = defaultProps.page;
+      loadParams.current.page = page;
       loadParams.current.count = undefined;
     } else if (blockLoadingRef.current) return;
     else if (count && page > Math.ceil(count / limit)) return;
@@ -113,6 +113,7 @@ export const useFlatList = <T>(props: IProps<T>) => {
       ...loadParams.current,
       ...params,
     };
+    console.log("loadParams:", loadParams.current);
     fetchItems(true);
   };
 

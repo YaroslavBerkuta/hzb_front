@@ -7,13 +7,14 @@ import { useFlatList } from "@/shared/hook";
 import { productApi } from "@/shared/api/products";
 
 export default function Catalog({ searchParams }: { searchParams: any }) {
-  const { items, count, setLoadParams, resetFlatList } = useFlatList<any>({
-    fetchItems: productApi.getLis,
-    needInit: true,
-    loadParams: {
-      categoryKey: searchParams.parent,
-    },
-  });
+  const { items, count, setLoadParams, resetFlatList } =
+    useFlatList<any>({
+      fetchItems: productApi.getLis,
+      needInit: true,
+      loadParams: {
+        categoryKey: searchParams.parent,
+      },
+    });
 
   useEffect(() => {
     resetFlatList();
