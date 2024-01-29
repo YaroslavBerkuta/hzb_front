@@ -129,15 +129,58 @@
   }
 }
 
+.contactWarapper {
+  .sectionTitle {
+    h2 {
+      font-weight: 400 !important;
+    }
+  }
+  li {
+    display: flex;
+    margin-bottom: 15px;
+    span {
+      color: #4b4b4b;
+      font-size: 21px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      display: inline-block;
+      margin-right: 10px;
+      width: 100px;
+    }
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 300px;
+      flex-wrap: wrap;
+      p {
+        color: #4b4b4b;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 200;
+        line-height: normal;
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+.item {
+  align-self: stretch;
+  max-width: 45%;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.email {
+  text-decoration: underline;
+}
+
 .flex {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  & > div {
-    max-width: 33%;
-    width: 100%;
-    margin-bottom: 15px;
-  }
 }
 
 @media (max-width: 1440px) {
