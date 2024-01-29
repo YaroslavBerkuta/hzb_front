@@ -47,262 +47,136 @@ export default function Contacts() {
   };
   return (
     <>
-      <section
-        style={{
-          padding: "0 0 100px 0",
-          background: "no-repeat center/cover url(/contactBg.png)",
-        }}
-      >
-        <Breadcrumbs color="white" />
-
-        <div className="container">
-          <div className={styles.form}>
-            <span>{t("form.subtitle")}</span>
-            <p>{t("form.title")}</p>
-
-            <div className={styles.main}>
-              <label>
-                <span>{t("form.name")}</span>
-                <input
-                  type="text"
-                  name="name"
-                  defaultValue={data.name}
-                  onChange={(e) => onChange(e.target.value, e.target.name)}
-                />
-              </label>
-              <label>
-                <span>{t("form.surname")}</span>
-                <input
-                  type="text"
-                  name="surname"
-                  defaultValue={data.surname}
-                  onChange={(e) => onChange(e.target.value, e.target.name)}
-                />
-              </label>
-              <label>
-                <span>{t("form.email")}</span>
-                <input
-                  type="email"
-                  name="email"
-                  defaultValue={data.email}
-                  onChange={(e) => onChange(e.target.value, e.target.name)}
-                />
-              </label>
-              <label>
-                <span>{t("form.phone")}</span>
-                <input
-                  type="tel"
-                  name="phone"
-                  defaultValue={data.phone}
-                  onChange={(e) => onChange(e.target.value, e.target.name)}
-                />
-              </label>
-              <label>
-                <span>{t("form.comment")}</span>
-                <textarea
-                  name="comment"
-                  id=""
-                  defaultValue={data.comment}
-                  onChange={(e) => onChange(e.target.value, e.target.name)}
-                ></textarea>
-              </label>
-            </div>
-            <ButtonWhite
-              onClick={() => handleSubmit()}
-              text={t("shared.element.btnOrange")}
-            />
-          </div>
-        </div>
-      </section>
       <section>
-        <div className="container">
-          <div className="sectionTitle">
-            <h2>Дистрибʼютори</h2>
-          </div>
-          <div className={map.flex}>
-            <div className={map.detail}>
-              <div className="sectionTitle">
-                <h2>
-                  {getTranslate<any>(dataMap?.translations, i18n.language)
-                    ?.name || "Дистрибютора не знайдено"}
-                </h2>
-              </div>
-              <div className={map.contact}>
-                <h3>Контакти</h3>
-                <ul
-                  dangerouslySetInnerHTML={{
-                    __html: getTranslate<any>(
-                      dataMap?.translations,
-                      i18n.language
-                    )?.description,
-                  }}
-                ></ul>
-              </div>
-            </div>
-            <div className={map.mapWrapper}>
-              <Map setKey={(id: string) => setKey(id)} />
-            </div>
-          </div>
-        </div>
+        <Breadcrumbs />
       </section>
       <section>
         <div className="container">
           <div className={styles.flex}>
             <div>
               <div className="sectionTitle">
-                <h2>{t("shared.sectionTitle.adress")}</h2>
+                <h2>Приймальня</h2>
               </div>
               <ul className={styles.contact}>
                 <li>
-                  <span>Адреса:</span>
-                  <p>Україна, 29000, м. Хмельницький, віл. Чорновола, 31</p>
-                </li>
-                <li>
                   <span>{t("shared.element.phone")}:</span>
-                  <p>+380977262832</p>
+                  <p>(0382)644396 (0382)644358</p>
                 </li>
                 <li>
                   <span>{t("shared.element.email")}:</span>
                   <p>xmbeton@gmail.com</p>
                 </li>
-                <li>
-                  <span>{t("shared.element.reception")}:</span>
-                  <p>(0382)644396, (0382)644358</p>
-                </li>
               </ul>
-            </div>
-            <div>
-              <div className="sectionTitle">
-                <h2>{t("shared.sectionTitle.labolatory")}</h2>
-              </div>
               <ul className={styles.contact}>
+                <div className="sectionTitle">
+                  <h2>Бухгалтерія</h2>
+                </div>
                 <li>
                   <span>{t("shared.element.phone")}:</span>
-                  <p>(0382)643205, +380978639352</p>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <div className="sectionTitle">
-                <h2>{t("shared.sectionTitle.zbut")}</h2>
-              </div>
-              <ul className={styles.contact}>
-                <span>Залізобетонні вироби</span>
-                <li>
-                  <span>{t("shared.element.phone")}:</span>
-                  <p>
-                    (0382)643025, (0382)643603, +380969176074, +380988671678
-                  </p>
-                </li>
-                <span>Сергій</span>
-                <li>
-                  <span>{t("shared.element.phone")}:</span>
-                  <p>+380969176074</p>
+                  <p>+380975401087 +380974890838 (0382)644369 </p>
                 </li>
                 <li>
                   <span>{t("shared.element.email")}:</span>
-                  <p>s_hzb@ukr.net</p>
+                  <p>xmbeton@gmail.com</p>
                 </li>
-                <span>Марина</span>
+              </ul>
+              <ul className={styles.contact}>
+                <div className="sectionTitle">
+                  <h2>ВІДДІЛ ПОСТАЧАННЯ</h2>
+                </div>
                 <li>
                   <span>{t("shared.element.phone")}:</span>
-                  <p>+380988671678</p>
+                  <p>+380964529572  +380977013673 (0382)645300 </p>
                 </li>
                 <li>
                   <span>{t("shared.element.email")}:</span>
-                  <p>mhzb.zbut@gmail.com</p>
+                  <p>dimad9441@gmail.com</p>
                 </li>
-                <span>Вячеслав</span>
+              </ul>
+              <ul className={styles.contact}>
+                <div className="sectionTitle">
+                  <h2>Випробувальна лабораторія</h2>
+                </div>
                 <li>
                   <span>{t("shared.element.phone")}:</span>
-                  <p>+380674950275</p>
+                  <p>+380978639352 (0382)643205</p>
                 </li>
                 <li>
                   <span>{t("shared.element.email")}:</span>
-                  <p>v-hzb@ukr.net</p>
+                  <p>labhzb@ukr.net</p>
+                </li>
+              </ul>
+              <ul className={styles.contact}>
+                <div className="sectionTitle">
+                  <h2>Виробничий відділ</h2>
+                </div>
+                <li>
+                  <span>{t("shared.element.phone")}:</span>
+                  <p>+380673113632 (0382)644355</p>
+                </li>
+                <li>
+                  <span>{t("shared.element.email")}:</span>
+                  <p>smolicigor1@gmail.com</p>
                 </li>
               </ul>
             </div>
             <div>
               <div className="sectionTitle">
-                <h2>{t("shared.sectionTitle.production")}</h2>
+                <h2>Відділ збуту</h2>
               </div>
               <ul className={styles.contact}>
+                <p>ЗАЛІЗОБЕТОНІ ВИРОБИ</p>
                 <li>
                   <span>{t("shared.element.phone")}:</span>
-                  <p>(0382)644355, +380673113632</p>
+                  <p>+380969176074 +380988671678 (0382)643025 (0382)643603</p>
+                </li>
+                <li>
+                  <span>{t("shared.element.email")}:</span>
+                  <p>skhzb.zbut@gmail.com</p>
                 </li>
               </ul>
-            </div>
-            <div>
-              <div className="sectionTitle">
-                <h2>{t("shared.sectionTitle.supply")}</h2>
-              </div>
               <ul className={styles.contact}>
+                <p>БЕТОНИ ТА РОЗЧИНИ</p>
                 <li>
                   <span>{t("shared.element.phone")}:</span>
-                  <p>(0382)645300, +380964529572, +380977013673</p>
+                  <p>+380967875437 +380985060240 +380673811183 (0382)645262 </p>
+                </li>
+                <li>
+                  <span>{t("shared.element.email")}:</span>
+                  <p>a-hzb@ukr.net</p>
                 </li>
               </ul>
-            </div>
-            <div>
-              <div className="sectionTitle">
-                <h2>{t("shared.sectionTitle.accounting")}</h2>
-              </div>
               <ul className={styles.contact}>
+                <p>ВИРОБИ З ДЕРЕВИНИ</p>
                 <li>
                   <span>{t("shared.element.phone")}:</span>
-                  <p>(0382)644369, +380975401087, +380974890838</p>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <div className="sectionTitle">
-                <h2>{t("shared.sectionTitle.concrete")}</h2>
-              </div>
-              <ul className={styles.contact}>
-                <li>
-                  <span>{t("shared.element.phone")}:</span>
-                  <p>
-                    (0382)645262, +380967875437, +380985060240, +380673811183
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <div className="sectionTitle">
-                <h2>{t("shared.sectionTitle.tree")}</h2>
-              </div>
-              <ul className={styles.contact}>
-                <li>
-                  <span>{t("shared.element.phone")}:</span>
-                  <p>(0382)645136, +380987377278</p>
+                  <p>+380987377278 (0382)645136 </p>
                 </li>
                 <li>
                   <span>{t("shared.element.email")}:</span>
                   <p>zbuthzb.st@gmail.com</p>
                 </li>
               </ul>
-            </div>
-            <div>
-              <div className="sectionTitle">
-                <h2>ЗАСТУПНИК КЕРІВНИКА ВІДДІЛУ ЗБУТУ</h2>
-              </div>
               <ul className={styles.contact}>
+                <p>ЗАСТУПНИК КЕРІВНИКА ВІДДІЛУ ЗБУТУ</p>
                 <li>
                   <span>{t("shared.element.phone")}:</span>
-                  <p>+380674950275</p>
+                  <p>+380674950275 </p>
+                </li>
+                <li>
+                  <span>{t("shared.element.email")}:</span>
+                  <p>v-hzb@ukr.net</p>
                 </li>
               </ul>
-            </div>
-            <div>
-              <div className="sectionTitle">
-                <h2>КЕРІВНИК ВІДДІЛУ ЗБУТУ</h2>
-              </div>
               <ul className={styles.contact}>
+                <p>КЕРІВНИК ВІДДІЛУ ЗБУТУ</p>
                 <li>
                   <span>{t("shared.element.phone")}:</span>
-                  <p>+380672772202</p>
+                  <p>+380672772202 </p>
+                </li>
+                <li>
+                  <span>{t("shared.element.email")}:</span>
+                  <p>s_hzb@ukr.net</p>
                 </li>
               </ul>
             </div>

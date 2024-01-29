@@ -77,6 +77,27 @@
 .contact {
   display: flex;
   flex-direction: column;
+  margin-top: 30px;
+  p:first-child {
+    color: #4b4b4b;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.72px;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 30px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 70px;
+      height: 4px;
+      background: #fd7a19;
+    }
+  }
   span {
     color: #4b4b4b;
     font-size: 21px;
