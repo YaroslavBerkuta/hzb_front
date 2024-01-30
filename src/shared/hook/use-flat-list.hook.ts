@@ -80,7 +80,7 @@ export const useFlatList = <T>(props: IProps<T>) => {
         ...props.loadParams,
         ...loadParams.current,
         limit: loadParams.current.limit,
-        page: loadParams.current.page + 1,
+        page: loadParams.current.page,
         count: response.data.count,
       };
       const fetchedItems = props.serrializatorItems(response.data.items);

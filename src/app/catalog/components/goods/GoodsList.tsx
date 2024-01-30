@@ -45,7 +45,7 @@ export const GoodsList: FC<IProps> = ({ items, count, setParams }) => {
         ))}
       </div>
       <Pagination
-        defaultCurrent={1}
+        current={1}
         pageSize={20}
         total={count}
         className={styles.pagination}
