@@ -5,7 +5,7 @@ export const advantageTranslates = {
   },
   quality: {
     title: "Quality control",
-    desc: "Quality management system ISO 9001-2015 Accredited laboratory Certified products",
+    desc: "Quality management system ISO 9001-2018 Accredited laboratory Certified products",
   },
   chain: {
     title: "Expanded dealer network",

@@ -23,10 +23,10 @@ export const GoodsItem: FC<IProps> = ({ name, image, atribute, id }) => {
           className={styles.detail}
           dangerouslySetInnerHTML={{ __html: atribute }}
         />
-        <Link href={`/product/${id}`} className="btn-outline outline-gray">
-          Детальніше
-        </Link>
       </div>
+      <Link href={`/product/${id}`} className="btn-outline outline-gray">
+        Детальніше
+      </Link>
     </div>
   );
 };

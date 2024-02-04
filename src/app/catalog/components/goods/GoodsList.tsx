@@ -11,9 +11,10 @@ interface IProps {
   items: any[];
   count: number;
   setParams: (par: any) => void;
+  page: number;
 }
 
-export const GoodsList: FC<IProps> = ({ items, count, setParams }) => {
+export const GoodsList: FC<IProps> = ({ items, count, setParams, page }) => {
   const { i18n } = useTranslation();
   return (
     <div className={styles.container}>
@@ -45,7 +46,8 @@ export const GoodsList: FC<IProps> = ({ items, count, setParams }) => {
         ))}
       </div>
       <Pagination
-        current={1}
+        defaultCurrent={1}
+        current={page}
         pageSize={20}
         total={count}
         className={styles.pagination}

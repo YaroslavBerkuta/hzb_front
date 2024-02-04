@@ -81,7 +81,7 @@ export default function Contacts() {
             </div>
             <div className={styles.item}>
               <div className="sectionTitle">
-                <h2 style={{ fontWeight: "400" }}>ЗАЛІЗОБЕТОНІ ВИРОБИ</h2>
+                <h2 style={{ fontWeight: "400" }}>БЕТОНИ ТА РОЗЧИНИ</h2>
               </div>
               <ul className={styles.contactWarapper}>
                 <li>

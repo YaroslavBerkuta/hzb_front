@@ -6,6 +6,8 @@ import { ProjectItems } from "./project-items";
 import { useTranslation } from "react-i18next";
 import { getTranslate } from "@/shared/helpers";
 
+import styles from "../index.module.scss";
+
 export const ProjectList = () => {
   const { items } = useFlatList({
     fetchItems: projectApi.getList,
@@ -13,7 +15,7 @@ export const ProjectList = () => {
   });
   const { i18n } = useTranslation();
   return (
-    <div>
+    <div className={styles.flex}>
       {items?.map((it: any) => (
         <ProjectItems
           key={it.id}

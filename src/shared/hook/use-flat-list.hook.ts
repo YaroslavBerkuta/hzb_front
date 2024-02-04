@@ -113,7 +113,6 @@ export const useFlatList = <T>(props: IProps<T>) => {
       ...loadParams.current,
       ...params,
     };
-    console.log("loadParams:", loadParams.current);
     fetchItems(true);
   };
 

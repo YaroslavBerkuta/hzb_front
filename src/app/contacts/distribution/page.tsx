@@ -10,7 +10,7 @@ import { getTranslate } from "@/shared/helpers";
 
 export default function Distribution() {
   const { i18n } = useTranslation();
-  const [key, setKey] = useState("va");
+  const [key, setKey] = useState("ki");
   const [data, setData] = useState<any>(null);
   const load = async () => {
     try {
@@ -36,12 +36,6 @@ export default function Distribution() {
                     "Дистрибютора не знайдено"}
                 </h2>
               </div>
-              {/* <p>
-                {
-                  getTranslate<any>(data?.translations, i18n.language)
-                    ?.description
-                }
-              </p> */}
               <div className={styles.contact}>
                 <h3>Контакти</h3>
                 <ul

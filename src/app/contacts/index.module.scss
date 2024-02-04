@@ -151,7 +151,6 @@
     div {
       display: flex;
       align-items: center;
-      justify-content: space-between;
       max-width: 300px;
       flex-wrap: wrap;
       p {
@@ -161,6 +160,7 @@
         font-weight: 200;
         line-height: normal;
         margin-right: 15px;
+        width: 117px;
       }
     }
   }

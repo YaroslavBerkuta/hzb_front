@@ -27,12 +27,13 @@ export default function Catalog({ searchParams }: { searchParams: any }) {
         <div className="container">
           <SubCategoriesList
             parentCat={searchParams.parent}
-            setCat={(val) => setLoadParams(val)}
+            setCat={(val) => setLoadParams({ ...val, page: 1 })}
           />
           <GoodsList
             items={items}
             count={count}
             setParams={(val) => setLoadParams(val)}
+            page={loadParams.page}
           />
         </div>
       </section>
