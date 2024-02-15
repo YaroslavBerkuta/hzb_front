@@ -20,8 +20,10 @@ export const ProjectList = () => {
         <ProjectItems
           key={it.id}
           title={getTranslate<any>(it.translations, i18n.language)?.name}
-          desc={getTranslate<any>(it.translations, i18n.language)?.description}
-          image={it.cover[0].fileUrl}
+          desc={getTranslate<any>(it.translations, i18n.language)?.sity}
+          image={it.cover[0]?.fileUrl}
+          info={getTranslate<any>(it.translations, i18n.language)?.info}
+          years={it.years}
         />
       ))}
     </div>

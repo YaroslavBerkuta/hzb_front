@@ -8,9 +8,17 @@ interface IProps {
   title: string;
   desc: string;
   image: string;
+  years: string;
+  info: any[];
 }
 
-export const ProjectItems: FC<IProps> = ({ title, desc, image }) => {
+export const ProjectItems: FC<IProps> = ({
+  title,
+  desc,
+  image,
+  info,
+  years,
+}) => {
   return (
     <div className={styles.item}>
       {image && (
@@ -25,20 +33,22 @@ export const ProjectItems: FC<IProps> = ({ title, desc, image }) => {
               length: 50,
             })}
           </h2>
-          <span>2012-2015</span>
+          <span>{years}</span>
         </div>
         <div className={styles.city}>
           <Image src="/pin.png" width={19} height={26} alt="pin" />
-          <p>м. Хмельницький</p>
+          <p>{desc}</p>
         </div>
         <div className={styles.product}>
           <Image src="/inbox.png" width={19} height={26} alt="pin" />
           <p>Обсяг продукції: </p>
         </div>
-        <ul>
-          <li>Бетонні платформи- 200шт </li>
-          <li>Бетон-2000м3</li>
-        </ul>
+        {info?.map((it) => (
+          <ul>
+            <li>{it.title}</li>
+            <li>{it.description}</li>
+          </ul>
+        ))}
       </div>
     </div>
   );
