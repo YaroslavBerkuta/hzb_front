@@ -14,7 +14,7 @@ interface IProps {
 }
 
 export const SubCategoriesList: FC<IProps> = ({ parentCat, setCat }) => {
-  const { sub, setActive, active } = useCatalogCategoty(parentCat);
+  const { sub, setActive, active } = useCatalogCategoty(parentCat || "");
   const { i18n } = useTranslation();
 
   const setSubCat = (key: string) => {
@@ -24,14 +24,17 @@ export const SubCategoriesList: FC<IProps> = ({ parentCat, setCat }) => {
 
   return (
     <div className={styles.flex}>
-      {sub?.map((it: any) => (
-        <SubCategoriesItem
-          key={it?.id}
-          onSelect={() => setSubCat(it?.key)}
-          isActive={it?.key === active ? true : false}
-          name={getTranslate<any>(it?.translations, i18n.language)?.name}
-        />
-      ))}
+      {sub?.map((it: any) => {
+        return (
+          <SubCategoriesItem
+            key={it?.id}
+            onSelect={() => setSubCat(it?.key)}
+            isActive={it?.key === active ? true : false}
+            bg={it.cover[0]?.fileUrl}
+            name={getTranslate<any>(it?.translations, i18n.language)?.name}
+          />
+        );
+      })}
     </div>
   );
 };

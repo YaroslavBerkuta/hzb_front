@@ -7,7 +7,10 @@ import { ItemType } from "antd/es/breadcrumb/Breadcrumb";
 import styles from "./index.module.scss";
 import { useTranslation } from "react-i18next";
 
-export const Breadcrumbs: FC<{ color?: string }> = ({ color }) => {
+export const Breadcrumbs: FC<{ color?: string; children?: any }> = ({
+  color,
+  children,
+}) => {
   const { t, i18n } = useTranslation();
   const router = useRouter();
   const pathname = usePathname();
@@ -42,15 +45,18 @@ export const Breadcrumbs: FC<{ color?: string }> = ({ color }) => {
   return (
     <section>
       <div className="container">
-        <Breadcrumb
-          className={styles.flex}
-          items={breadcrumbs.map((it: ItemType, index: number) => ({
-            key: it.key,
-            title: it.title,
-            href: it.href,
-            className: color ? styles.itemWhite : styles.item,
-          }))}
-        />
+        <div className={styles.wrapper}>
+          <Breadcrumb
+            className={styles.flex}
+            items={breadcrumbs.map((it: ItemType, index: number) => ({
+              key: it.key,
+              title: it.title,
+              href: it.href,
+              className: color ? styles.itemWhite : styles.item,
+            }))}
+          />
+          {children}
+        </div>
       </div>
     </section>
   );

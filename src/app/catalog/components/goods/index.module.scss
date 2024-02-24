@@ -63,7 +63,8 @@
 
 .item {
   padding: 12px;
-  background: #fff;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 1);
   max-width: 24%;
   width: 100%;
   margin-bottom: 10px;
@@ -72,10 +73,22 @@
   justify-content: space-between;
   align-self: stretch;
   a {
-    width: 100%;
-    display: block;
-    margin-top: 20px;
+    margin: 30px 0;
+    align-self: center;
+    color: rgba(0, 0, 0, 1);
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom: 1px solid rgba(238, 117, 9, 1);
   }
+}
+.shortTitle {
+  color: rgba(0, 0, 0, 1);
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 40px;
 }
 
 .img {
@@ -97,7 +110,7 @@
     line-height: normal;
     text-transform: uppercase;
     margin-bottom: 12px;
-    height: 37px;
+    height: 45px;
   }
   a {
     display: block;
@@ -128,7 +141,7 @@
     color: #fd7a19;
     font-size: 20px;
     font-style: normal;
-    font-weight: 700;
     line-height: normal;
+    text-transform: capitalize;
   }
 }

@@ -54,7 +54,6 @@ export const useFlatList = <T>(props: IProps<T>) => {
   const [isInit, setIsInit] = useState(false);
 
   const fetchItems = async (firstFetch = false) => {
-    console.log("firstFetch:", firstFetch);
     const { count, page, limit } = loadParams.current;
 
     if (firstFetch) {

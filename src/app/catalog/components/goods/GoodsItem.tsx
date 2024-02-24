@@ -19,14 +19,13 @@ export const GoodsItem: FC<IProps> = ({ name, image, atribute, id }) => {
         <div className={styles.img}>
           <Image src={image} alt={name} layout="fill" />
         </div>
+        <p className={styles.shortTitle}>Короткий опис</p>
         <div
           className={styles.detail}
           dangerouslySetInnerHTML={{ __html: atribute }}
         />
       </div>
-      <Link href={`/product/${id}`} className="btn-outline outline-gray">
-        Детальніше
-      </Link>
+      <Link href={`/product/${id}`}>Детальніше</Link>
     </div>
   );
 };

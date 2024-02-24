@@ -1,12 +1,16 @@
 "use client";
 import { Breadcrumbs } from "@/shared/components";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import { GoodsList, SubCategoriesList } from "./components";
 import { useFlatList } from "@/shared/hook";
 import { productApi } from "@/shared/api/products";
+import { categoriesApi } from "@/shared/api/categories";
+import { HeaderComponent } from "./components/headerComponent";
 
 export default function Catalog({ searchParams }: { searchParams: any }) {
+  const [catalog, setCatalog] = useState("");
+  const [price, setPrice] = useState("");
   const { items, count, setLoadParams, resetFlatList, loadParams } =
     useFlatList<any>({
       fetchItems: productApi.getLis,
@@ -16,13 +20,29 @@ export default function Catalog({ searchParams }: { searchParams: any }) {
       },
     });
 
+  const loadCatalog = async () => {
+    try {
+      const res = await categoriesApi.getCatalog(loadParams?.categoryKey);
+      setCatalog(res?.data?.catalog?.fileUrl);
+      setPrice(res?.data?.price?.fileUrl);
+    } catch (error) {
+      console.log("load error", error);
+    }
+  };
+
   useEffect(() => {
     resetFlatList();
   }, [searchParams.parent]);
 
+  useEffect(() => {
+    loadCatalog();
+  }, [loadParams?.categoryKey, searchParams.parent]);
+
   return (
     <>
-      <Breadcrumbs />
+      <Breadcrumbs>
+        <HeaderComponent priceLink={price} catalogLink={catalog} />
+      </Breadcrumbs>
       <section>
         <div className="container">
           <SubCategoriesList

@@ -7,8 +7,13 @@
   text-transform: uppercase;
 }
 
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .itemWhite {
-  color: white!important;
+  color: white !important;
   font-size: 21px;
   font-style: normal;
   font-weight: 500;
