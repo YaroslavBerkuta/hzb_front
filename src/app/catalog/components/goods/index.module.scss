@@ -145,3 +145,45 @@
     text-transform: capitalize;
   }
 }
+
+@media (max-width: 1440px) {
+  .item {
+    max-width: 32%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .item {
+    margin-bottom: 15px;
+    a {
+      margin: 15px 0;
+    }
+  }
+  .shortTitle {
+    margin-top: 15px;
+  }
+  .flex {
+    gap: 0;
+    justify-content: space-between;
+  }
+  .detail {
+    p {
+      font-size: 17px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .item {
+    max-width: 49%;
+  }
+}
+
+@media (max-width: 425px) {
+  .item {
+    max-width: 100%;
+  }
+  .sort {
+    width: 165px;
+  }
+}

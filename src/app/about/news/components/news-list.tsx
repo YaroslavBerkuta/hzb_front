@@ -22,7 +22,7 @@ export const NewsList = () => {
           key={it.id}
           title={getTranslate<any>(it.translations, i18n.language)?.name}
           desc={getTranslate<any>(it.translations, i18n.language)?.description}
-          img={it.cover[0].fileUrl}
+          img={it?.cover?.length ? it.cover[0].fileUrl : ""}
           create={new Date(it.createdAt).toLocaleDateString(i18n.language, {
             year: "numeric",
             month: "long",

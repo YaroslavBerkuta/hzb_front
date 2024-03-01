@@ -58,7 +58,7 @@ export default function Product() {
               />
             </div>
           </div>
-          {data?.table[0] && (
+          {data?.table.length && (
             <div className={styles.table}>
               <Image src={data?.table[0]?.fileUrl} alt="table" layout="fill" />
             </div>

@@ -26,28 +26,28 @@ export const menuConfig = (): IHeaderMenu[] => {
       link: null,
       children: [
         {
-          label: "Залізобетонні вироби",
+          label: t("nav.catalog.el1"),
           key: "zb",
           link: "/catalog",
           image: "/zb.svg",
           query: { parent: CatalogTypes.RPS },
         },
         {
-          label: "Бетони та розчини",
+          label: t("nav.catalog.el2"),
           key: "beton",
           link: "/catalog",
           image: "/beton.svg",
           query: { parent: CatalogTypes.CAM },
         },
         {
-          label: "Столярні вироби",
+          label: t("nav.catalog.el3"),
           key: "stolar",
           link: "/catalog",
           image: "/stolar.svg",
           query: { parent: CatalogTypes.CP },
         },
         {
-          label: "3D Моделі",
+          label: t("nav.catalog.el4"),
           key: "3d",
           link: "/catalog",
           image: "/3d.svg",

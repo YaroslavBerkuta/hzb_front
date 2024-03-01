@@ -36,7 +36,7 @@ export default function Catalog({ searchParams }: { searchParams: any }) {
 
   useEffect(() => {
     loadCatalog();
-  }, [loadParams?.categoryKey, searchParams.parent]);
+  }, [loadParams, searchParams.parent]);
 
   return (
     <>

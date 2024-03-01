@@ -23,8 +23,15 @@ export const MenuMobil = () => {
             <div key={index}>
               <p>{it.label}</p>
               {it.children?.map((el, index) => (
-                <li key={index}>
-                  <Link href={el.link}>{el.label}</Link>
+                <li key={index} onClick={() => setActive(false)}>
+                  <Link
+                    href={{
+                      pathname: el.link,
+                      query: el.query,
+                    }}
+                  >
+                    {el.label}
+                  </Link>
                 </li>
               ))}
             </div>

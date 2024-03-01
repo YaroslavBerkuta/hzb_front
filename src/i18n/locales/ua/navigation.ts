@@ -1,6 +1,10 @@
 export const navTranslation = {
   catalog: {
     label: "Каталог",
+    el1: "Залізобетонні вироби",
+    el2: "Бетони та розчини",
+    el3: "Столярні вироби",
+    el4: "3D Моделі",
   },
   about: {
     label: "Про нас",

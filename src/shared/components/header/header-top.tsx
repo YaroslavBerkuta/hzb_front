@@ -1,6 +1,12 @@
 "use client";
 import Link from "next/link";
-import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
+import React, {
+  FC,
+  useCallback,
+  useLayoutEffect,
+  useMemo,
+  useState,
+} from "react";
 import Image from "next/image";
 import { HeaderContact, HeaderNavigation } from "../navigation";
 import styles from "./index.module.scss";
@@ -8,10 +14,26 @@ import { MenuMobil } from "./menu-mobil";
 
 interface IProps {}
 
+const getWindowWidth = () => {
+  if (typeof window !== "undefined") {
+    return window.innerWidth;
+  }
+  return 1620;
+};
+
 export const HeaderTop: FC<IProps> = ({}) => {
-  const [width, setWidth] = useState(0);
-  useEffect(() => {
-    setWidth(window.innerWidth);
+  const [width, setWidth] = useState(getWindowWidth());
+
+  useLayoutEffect(() => {
+    const handleResize = () => {
+      setWidth(getWindowWidth());
+    };
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
   }, []);
 
   const renderMenu = useMemo(() => {

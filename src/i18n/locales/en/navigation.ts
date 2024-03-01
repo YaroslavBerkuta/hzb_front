@@ -1,6 +1,10 @@
 export const navTranslation = {
   catalog: {
     label: "Catalog",
+    el1: "Concrete products",
+    el2: "Concrete and mortars",
+    el3: "Joinery products",
+    el4: "3D Models",
   },
   about: {
     label: "About us",
