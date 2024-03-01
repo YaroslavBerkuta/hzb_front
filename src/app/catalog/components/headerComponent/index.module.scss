@@ -14,3 +14,10 @@
   padding: 14px 28px;
   color: white;
 }
+
+@media (max-width: 500px) {
+  .flex {
+    display: flex;
+    align-items: center;
+  }
+}

@@ -8,7 +8,7 @@ interface IProps {
 
 export const HeaderComponent: FC<IProps> = ({ priceLink, catalogLink }) => {
   return (
-    <div>
+    <div className={stylse.flex}>
       {priceLink && (
         <a href={priceLink} target="_blank" className={stylse.priceBtn}>
           Ціни
@@ -16,7 +16,7 @@ export const HeaderComponent: FC<IProps> = ({ priceLink, catalogLink }) => {
       )}
       {catalogLink && (
         <a href={catalogLink} target="_blank" className={stylse.catalogBtn}>
-          Каталог залізобетоні вироби
+          Каталог
         </a>
       )}
     </div>
