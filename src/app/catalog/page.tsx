@@ -1,22 +1,32 @@
 "use client";
 import { Breadcrumbs } from "@/shared/components";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 import { GoodsList, SubCategoriesList } from "./components";
 import { useFlatList } from "@/shared/hook";
 import { productApi } from "@/shared/api/products";
 import { categoriesApi } from "@/shared/api/categories";
 import { HeaderComponent } from "./components/headerComponent";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Catalog({ searchParams }: { searchParams: any }) {
   const [catalog, setCatalog] = useState("");
   const [price, setPrice] = useState("");
+  const router = useRouter();
+  const path = usePathname();
+
+  const setSub = (val: any) => {
+    setLoadParams({ ...val, page: 1 });
+    const url = `${path}?parent=${searchParams.parent}&sub=${val.categoryKey}`;
+    router.push(url);
+  };
+
   const { items, count, setLoadParams, resetFlatList, loadParams } =
     useFlatList<any>({
       fetchItems: productApi.getLis,
       needInit: true,
       loadParams: {
-        categoryKey: searchParams.parent,
+        categoryKey: searchParams.sub || searchParams.parent,
       },
     });
 
@@ -31,12 +41,9 @@ export default function Catalog({ searchParams }: { searchParams: any }) {
   };
 
   useEffect(() => {
-    resetFlatList();
-  }, [searchParams.parent]);
-
-  useEffect(() => {
     loadCatalog();
-  }, [loadParams, searchParams.parent]);
+    resetFlatList();
+  }, [searchParams.sub, searchParams.parent]);
 
   return (
     <>
@@ -47,7 +54,8 @@ export default function Catalog({ searchParams }: { searchParams: any }) {
         <div className="container">
           <SubCategoriesList
             parentCat={searchParams.parent}
-            setCat={(val) => setLoadParams({ ...val, page: 1 })}
+            setCat={(val) => setSub(val)}
+            active={searchParams?.sub}
           />
           <GoodsList
             items={items}

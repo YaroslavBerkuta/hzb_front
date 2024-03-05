@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FC, useMemo } from "react";
+import React, { FC } from "react";
 import styles from "./index.module.scss";
 import { SubCategoriesItem } from "./SubCategoriesItem";
 import { CatalogTypes } from "@/shared/types";
@@ -11,10 +11,15 @@ import { useTranslation } from "react-i18next";
 interface IProps {
   parentCat: CatalogTypes;
   setCat: (par: any) => void;
+  active?: string | undefined;
 }
 
-export const SubCategoriesList: FC<IProps> = ({ parentCat, setCat }) => {
-  const { sub, setActive, active } = useCatalogCategoty(parentCat || "");
+export const SubCategoriesList: FC<IProps> = ({
+  parentCat,
+  setCat,
+  active,
+}) => {
+  const { sub, setActive } = useCatalogCategoty(parentCat || "");
   const { i18n } = useTranslation();
 
   const setSubCat = (key: string) => {

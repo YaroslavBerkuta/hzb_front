@@ -15,7 +15,6 @@
   position: relative;
   &::after {
     content: "";
-    position: relative;
     position: absolute;
     z-index: 8;
     top: 50%;
@@ -56,6 +55,27 @@
 
 .itemActive {
   background-color: white;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 8;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(
+        0deg,
+        rgba(238, 117, 9, 0.8),
+        rgba(238, 117, 9, 0.8)
+      ),
+      linear-gradient(0deg, #ffffff, #ffffff);
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    border-radius: 8px;
+    opacity: 0.6;
+  }
 }
 
 @media (max-width: 1024px) {

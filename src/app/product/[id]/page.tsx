@@ -5,15 +5,17 @@ import React, { useEffect, useState } from "react";
 
 import styles from "../index.module.scss";
 import Image from "next/image";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { productApi } from "@/shared/api/products";
 import { getTranslate } from "@/shared/helpers";
 import { useTranslation } from "react-i18next";
+import { Breadcrumb } from "antd";
 
 export default function Product() {
   const params = useParams();
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [data, setData] = useState<any>();
+  const router = useRouter();
 
   const load = async () => {
     try {
@@ -30,6 +32,35 @@ export default function Product() {
 
   return (
     <>
+      <section>
+        <div className="container">
+          <div className={styles.wrapper}>
+            <Breadcrumb
+              className={styles.flex}
+              items={[
+                {
+                  title: t(`bread.home`),
+                  href: "/",
+                  className: styles.item,
+                  key: "home",
+                },
+                {
+                  key: "catalog",
+                  title: t(`bread.catalog`),
+                  className: styles.item,
+                  onClick: () => router.back(),
+                },
+                {
+                  key: data?.id,
+                  title: getTranslate<any>(data?.translations, i18n.language)
+                    ?.name,
+                  className: styles.item,
+                },
+              ]}
+            />
+          </div>
+        </div>
+      </section>
       <section>
         <div className="container">
           <div className="sectionTitle">

@@ -23,6 +23,22 @@
     line-height: normal;
     letter-spacing: -0.735px;
   }
+  ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    li {
+      color: #4b4b4b;
+      font-family: "Montserrat", sans-serif;
+      font-size: 21px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      text-transform: capitalize;
+      margin-bottom: 10px;
+    }
+  }
   a {
     margin-top: 62px;
     color: #4b4b4b;
@@ -44,6 +60,11 @@
     p {
       font-size: 18px;
     }
+    ul {
+      li {
+        font-size: 18px;
+      }
+    }
   }
 }
 
@@ -62,6 +83,11 @@
     p {
       font-size: 20px;
     }
+    ul {
+      li {
+        font-size: 20px;
+      }
+    }
   }
 }
 
@@ -78,6 +104,11 @@
   .detail {
     p {
       font-size: 15px;
+    }
+    ul {
+      li {
+        font-size: 15px;
+      }
     }
     a {
       font-size: 16px;
