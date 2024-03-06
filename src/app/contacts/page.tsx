@@ -28,7 +28,9 @@ export default function Contacts() {
                 <li>
                   <span>E-mail:</span>
                   <div>
-                    <p className={styles.email}>xmbeton@gmail.com</p>
+                    <a className={styles.email} href="mailto:xmbeton@gmail.com">
+                      xmbeton@gmail.com
+                    </a>
                   </div>
                 </li>
               </ul>
@@ -46,6 +48,7 @@ export default function Contacts() {
                   <div>
                     <p>+380969176074</p>
                     <p>+380988671678</p>
+                    <p>+380677578106</p>
                     <p>(0382)643025</p>
                     <p>(0382)643603</p>
                   </div>
@@ -53,7 +56,12 @@ export default function Contacts() {
                 <li>
                   <span>E-mail:</span>
                   <div>
-                    <p className={styles.email}>skhzb.zbut@gmail.com</p>
+                    <a
+                      className={styles.email}
+                      href="mailto:skhzb.zbut@gmail.com"
+                    >
+                      skhzb.zbut@gmail.com
+                    </a>
                   </div>
                 </li>
               </ul>
@@ -74,7 +82,9 @@ export default function Contacts() {
                 <li>
                   <span>E-mail:</span>
                   <div>
-                    <p className={styles.email}>xmbeton@gmail.com</p>
+                    <a className={styles.email} href="mailto:xmbeton@gmail.com">
+                      xmbeton@gmail.com
+                    </a>
                   </div>
                 </li>
               </ul>
@@ -96,7 +106,9 @@ export default function Contacts() {
                 <li>
                   <span>E-mail:</span>
                   <div>
-                    <p className={styles.email}>a-hzb@ukr.net</p>
+                    <a className={styles.email} href="mailto:a-hzb@ukr.net">
+                      a-hzb@ukr.net
+                    </a>
                   </div>
                 </li>
               </ul>
@@ -117,7 +129,12 @@ export default function Contacts() {
                 <li>
                   <span>E-mail:</span>
                   <div>
-                    <p className={styles.email}>dimad9441@gmail.com</p>
+                    <a
+                      className={styles.email}
+                      href="mailto:dimad9441@gmail.com"
+                    >
+                      dimad9441@gmail.com
+                    </a>
                   </div>
                 </li>
               </ul>
@@ -137,7 +154,12 @@ export default function Contacts() {
                 <li>
                   <span>E-mail:</span>
                   <div>
-                    <p className={styles.email}>zbuthzb.st@gmail.com</p>
+                    <a
+                      className={styles.email}
+                      href="mailto:zbuthzb.st@gmail.com"
+                    >
+                      zbuthzb.st@gmail.com
+                    </a>
                   </div>
                 </li>
               </ul>
@@ -157,7 +179,9 @@ export default function Contacts() {
                 <li>
                   <span>E-mail:</span>
                   <div>
-                    <p className={styles.email}>labhzb@ukr.net</p>
+                    <a className={styles.email} href="mailto:labhzb@ukr.net">
+                      labhzb@ukr.net
+                    </a>
                   </div>
                 </li>
               </ul>
@@ -178,7 +202,9 @@ export default function Contacts() {
                 <li>
                   <span>E-mail:</span>
                   <div>
-                    <p className={styles.email}>v-hzb@ukr.net</p>
+                    <a className={styles.email} href="mailto:v-hzb@ukr.net">
+                      v-hzb@ukr.net
+                    </a>
                   </div>
                 </li>
               </ul>
@@ -198,7 +224,12 @@ export default function Contacts() {
                 <li>
                   <span>E-mail:</span>
                   <div>
-                    <p className={styles.email}>smolicigor1@gmail.com</p>
+                    <a
+                      className={styles.email}
+                      href="mailto:smolicigor1@gmail.com"
+                    >
+                      smolicigor1@gmail.com
+                    </a>
                   </div>
                 </li>
               </ul>
@@ -217,7 +248,9 @@ export default function Contacts() {
                 <li>
                   <span>E-mail:</span>
                   <div>
-                    <p className={styles.email}>s_hzb@ukr.net</p>
+                    <a className={styles.email} href="mailto:s_hzb@ukr.net">
+                      s_hzb@ukr.net
+                    </a>
                   </div>
                 </li>
               </ul>
