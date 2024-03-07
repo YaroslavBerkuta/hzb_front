@@ -15,7 +15,7 @@ export const Footer = () => {
         <ul className={stylse.contact}>
           <li>
             <span>{t("shared.element.adress")}:</span>
-            <p>Україна, 29010, м. Хмельницький, вул. Чорновола, 31</p>
+            <p>{t("shared.contact.adress")}</p>
           </li>
           <li>
             <span>{t("shared.element.phone")}:</span>
@@ -27,7 +27,7 @@ export const Footer = () => {
           </li>
         </ul>
         <ul className={stylse.social}>
-          <Link href={'https://www.instagram.com/hzb.ukraine/'} target="_blank">
+          <Link href={"https://www.instagram.com/hzb.ukraine/"} target="_blank">
             <svg
               width="15"
               height="15"
@@ -49,7 +49,7 @@ export const Footer = () => {
               />
             </svg>
           </Link>
-          <Link href={'https://www.instagram.com/hzb.ukraine/'} target="_blank">
+          <Link href={"https://www.instagram.com/hzb.ukraine/"} target="_blank">
             <svg
               width="8"
               height="15"

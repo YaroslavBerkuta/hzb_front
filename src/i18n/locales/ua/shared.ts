@@ -16,6 +16,8 @@ export const sharedTranslation = {
     tree: "Вироби з деревини",
     about: "Про нас",
     history: "Наша історія",
+    price: "Ціни",
+    catalog: "Каталог",
   },
   element: {
     btnOrange: "Зв’язатись з нами",
@@ -28,5 +30,9 @@ export const sharedTranslation = {
     reception: "Приймальня",
     homeTitle:
       "В СПРАВІ БУДІВНИЦТВА ПОТРІБНО ПРАЦЮВАТИ З СПРАВЖНІМИ ПРОФЕСІОНАЛАМИ",
+  },
+  contact: {
+    title:'КОНТАКТИ',
+    adress: "Україна, 29010, м. Хмельницький, вул. Чорновола, 31",
   },
 };

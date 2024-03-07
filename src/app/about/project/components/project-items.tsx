@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import styles from "../index.module.scss";
 import { truncate } from "lodash";
+import { Lang } from "@/shared/helpers";
 
 interface IProps {
   title: string;
@@ -10,6 +11,7 @@ interface IProps {
   image: string;
   years: string;
   info: any[];
+  lang: string;
 }
 
 export const ProjectItems: FC<IProps> = ({
@@ -18,6 +20,7 @@ export const ProjectItems: FC<IProps> = ({
   image,
   info,
   years,
+  lang,
 }) => {
   return (
     <div className={styles.item}>
@@ -41,7 +44,7 @@ export const ProjectItems: FC<IProps> = ({
         </div>
         <div className={styles.product}>
           <Image src="/inbox.png" width={19} height={26} alt="pin" />
-          <p>Обсяг продукції: </p>
+          <p>{lang === Lang.UA ? "Обсяг продукції:" : "Volume of products:"}</p>
         </div>
         {info?.map((it) => (
           <ul>

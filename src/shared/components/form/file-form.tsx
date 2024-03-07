@@ -5,6 +5,7 @@ import { Button } from "../button";
 import { sendForm } from "@/shared/services/domain/mail.service";
 import { IMainFormData } from "@/shared/api/form";
 import { useTranslation } from "react-i18next";
+import { message } from "antd";
 
 export const FileForm = () => {
   const { t } = useTranslation();
@@ -17,7 +18,15 @@ export const FileForm = () => {
   });
   const handleSubmit = async () => {
     try {
-      await sendForm(data);
+      if (
+        data.name.length < 1 ||
+        data.email.length < 1 ||
+        data.phone.length < 1
+      ) {
+        return message.error("Не вірно заповнені данні!");
+      } else {
+        await sendForm(data);
+      }
     } catch (error) {
       console.log(error);
     }
@@ -36,6 +45,7 @@ export const FileForm = () => {
           name="name"
           defaultValue={data.name}
           onChange={(e) => onChange(e.target.value, e.target.name)}
+          required
         />
       </div>
       <div className={styles.input}>
@@ -45,6 +55,7 @@ export const FileForm = () => {
           name="phone"
           defaultValue={data.phone}
           onChange={(e) => onChange(e.target.value, e.target.name)}
+          required
         />
       </div>
       <div className={styles.input}>
@@ -54,6 +65,7 @@ export const FileForm = () => {
           name="email"
           defaultValue={data.email}
           onChange={(e) => onChange(e.target.value, e.target.name)}
+          required
         />
       </div>
       <div className={styles.input}>

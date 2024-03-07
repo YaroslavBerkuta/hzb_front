@@ -24,6 +24,7 @@ export const ProjectList = () => {
           image={it.cover[0]?.fileUrl}
           info={getTranslate<any>(it.translations, i18n.language)?.info}
           years={it.years}
+          lang={i18n.language}
         />
       ))}
     </div>

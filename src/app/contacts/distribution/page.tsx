@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 import { getTranslate } from "@/shared/helpers";
 
 export default function Distribution() {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [key, setKey] = useState("ki");
   const [data, setData] = useState<any>(null);
   const load = async () => {
@@ -37,7 +37,7 @@ export default function Distribution() {
                 </h2>
               </div>
               <div className={styles.contact}>
-                <h3>Контакти</h3>
+                <h3>{t("shared.contact.title")}</h3>
                 <ul
                   dangerouslySetInnerHTML={{
                     __html: getTranslate<any>(data?.translations, i18n.language)

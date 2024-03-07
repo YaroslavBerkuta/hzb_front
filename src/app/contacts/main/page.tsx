@@ -6,6 +6,7 @@ import styles from "./index.module.scss";
 import { IMainFormData } from "@/shared/api/form";
 import { sendForm } from "@/shared/services/domain/mail.service";
 import { useTranslation } from "react-i18next";
+import { message } from "antd";
 
 export default function Main() {
   const { t } = useTranslation();
@@ -18,7 +19,15 @@ export default function Main() {
   });
   const handleSubmit = async () => {
     try {
-      await sendForm(data);
+      if (
+        data.name.length < 1 ||
+        data.email.length < 1 ||
+        data.phone.length < 1
+      ) {
+        return message.error("Не вірно заповнені данні!");
+      } else {
+        await sendForm(data);
+      }
     } catch (error) {
       console.log(error);
     }

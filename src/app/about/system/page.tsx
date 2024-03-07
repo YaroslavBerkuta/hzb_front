@@ -6,7 +6,7 @@ import styles from "./index.module.scss";
 import { useFlatList } from "@/shared/hook";
 import { qualityApi } from "@/shared/api/quality";
 import { useTranslation } from "react-i18next";
-import { getTranslate } from "@/shared/helpers";
+import { Lang, getTranslate } from "@/shared/helpers";
 import { DownloadOutlined } from "@ant-design/icons";
 export default function System() {
   const { items } = useFlatList({
@@ -40,7 +40,10 @@ export default function System() {
                     }
                     target="_blank"
                   >
-                    Завантажити сертифікати
+                    {i18n.language === Lang.UA
+                      ? "Завантажити сертифікати"
+                      : "Download certificates"}
+
                     <DownloadOutlined
                       color="black"
                       style={{ marginLeft: "10px" }}

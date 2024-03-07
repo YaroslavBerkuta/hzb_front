@@ -59,8 +59,11 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .flex {
     padding: 25px;
   }
+}
+
+@media (max-width: 500px) {
 }

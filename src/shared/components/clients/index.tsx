@@ -1,48 +1,51 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 
 import styles from "./index.module.scss";
+import { useTranslation } from "react-i18next";
 
 export const Clients = () => {
+  const { t } = useTranslation();
   const data = [
     {
       title: "AUTOSTRADA",
-      desc: "Один із лідерів українського дорожнього будівництва, що виконує найскладніші проєкти на найвищому рівні",
+      desc: t("client.el1"),
       img: "/auytostrada.png",
     },
     {
       title: "AVILA",
-      desc: "Лідер в області будівництва житлових комплексів в Україні.",
+      desc: t("client.el2"),
       img: "/avila.png",
     },
     {
       title: "КРЕАТОР БУД",
-      desc: "Будівництво житлової та комерційної нерухомості,  понад 50 реалізованих проектів.",
+      desc: t("client.el3"),
       img: "/bud.png",
     },
     {
       title: "ЕПІЦЕНТР",
-      desc: "Лідер у сегменті роздрібної торгівлі товарами для дому та ремонту на ринку.",
+      desc: t("client.el4"),
       img: "/epicentr.png",
     },
     {
       title: "KERNEL",
-      desc: "Провідний у світі та найбільший в Україні виробник та експортер соняшникової олії",
+      desc: t("client.el5"),
       img: "/kernel.png",
     },
     {
       title: "РІЕЛ",
-      desc: "Корпорація нерухомості стала одним з лідерів на ринку, здавши в експлуатацію понад 105 тис кв. м житла.",
+      desc: t("client.el6"),
       img: "/riel.png",
     },
     {
       title: "URD",
-      desc: "Успішна компанія із 52-річним досвідом роботи в галузі будівництва та ремонту автомобільних доріг в Україні.",
+      desc: t("client.el7"),
       img: "/urd.png",
     },
     {
       title: "БУД АЛЬЯНС",
-      desc: "Будівельна компанія набула статусу надійної і найбільшої в Хмельницькій області,",
+      desc: t("client.el8"),
       img: "/alians.png",
     },
   ];

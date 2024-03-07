@@ -1,18 +1,22 @@
+"use client";
 import React from "react";
 import { InstagramPost } from "./instagram-post";
 import styles from "./index.module.scss";
+import { useFlatList } from "@/shared/hook";
+import { instagramList } from "@/shared/api/instagram";
 
 export const Instagram = () => {
+  const { items } = useFlatList({
+    fetchItems: instagramList,
+    needInit: true,
+    limit: 8,
+  });
+
   return (
     <div className={styles.flex}>
-      <InstagramPost url={"/inst1.png"} />
-      <InstagramPost url={"/inst2.png"} />
-      <InstagramPost url={"/inst3.png"} />
-      <InstagramPost url={"/inst4.png"} />
-      <InstagramPost url={"/inst5.png"} />
-      <InstagramPost url={"/inst6.png"} />
-      <InstagramPost url={"/inst7.png"} />
-      <InstagramPost url={"/inst8.png"} />
+      {items?.map((it: any) => (
+        <InstagramPost url={it?.cover[0]?.fileUrl} link={it?.link} />
+      ))}
     </div>
   );
 };

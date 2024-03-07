@@ -198,7 +198,28 @@
   }
 }
 
+@media (max-width: 768px) {
+  .flex {
+    > div {
+      max-width: 49%;
+    }
+  }
+  .contactWarapper {
+    li {
+      div {
+        p {
+          width: 110px;
+          font-size: 14;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 500px) {
+  .map {
+    height: 400px;
+  }
   .item {
     &:nth-child(1) {
       order: 1;

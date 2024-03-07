@@ -16,6 +16,8 @@ export const sharedTranslation = {
     tree: "Wood products",
     about: "About us",
     history: "Our story",
+    price: "Price",
+    catalog: "Catalog",
   },
   element: {
     btnOrange: "Contact us",
@@ -27,5 +29,9 @@ export const sharedTranslation = {
     adress: "Adress",
     reception: "Reception",
     homeTitle: "IN CONSTRUCTION, YOU NEED TO WORK WITH REAL PROFESSIONALS",
+  },
+  contact: {
+    title: "Contact",
+    adress: "31, Chornovola str., Khmelnytskyi, 29010, Ukraine",
   },
 };

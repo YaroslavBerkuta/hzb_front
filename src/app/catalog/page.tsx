@@ -1,6 +1,6 @@
 "use client";
 import { Breadcrumbs } from "@/shared/components";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { GoodsList, SubCategoriesList } from "./components";
 import { useFlatList } from "@/shared/hook";

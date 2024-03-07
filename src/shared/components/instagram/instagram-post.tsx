@@ -6,11 +6,12 @@ import styles from "./index.module.scss";
 
 interface IProps {
   url: string;
+  link: string;
 }
 
-export const InstagramPost: FC<IProps> = ({ url }) => {
+export const InstagramPost: FC<IProps> = ({ url, link }) => {
   return (
-    <Link href="" className={styles.item}>
+    <Link href={link} className={styles.item} target="_blank">
       <Image
         src={url}
         alt="post"
