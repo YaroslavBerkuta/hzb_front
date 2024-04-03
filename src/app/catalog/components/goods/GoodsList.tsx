@@ -1,5 +1,5 @@
 "use client";
-import React, { FC, useCallback, useMemo } from "react";
+import React, { FC, useMemo } from "react";
 import { GoodsItem } from "./GoodsItem";
 
 import styles from "./index.module.scss";
@@ -43,24 +43,7 @@ export const GoodsList: FC<IProps> = ({ items, count, setParams, page }) => {
     );
   }, [i18n.language]);
 
-  const renderItem = useCallback(
-    (it: any) => {
-      return (
-        <GoodsItem
-          key={it.id}
-          id={it.id}
-          name={getTranslate<any>(it?.translations, i18n.language)?.name}
-          image={it?.cover[0]?.fileUrl}
-          atribute={
-            getTranslate<any>(it?.translations, i18n.language)?.previewHtml
-          }
-          lang={i18n.language}
-        />
-      );
-    },
-    [i18n.language]
-  );
-
+  
   return (
     <div className={styles.container}>
       <div className={styles.controls}>
@@ -91,7 +74,18 @@ export const GoodsList: FC<IProps> = ({ items, count, setParams, page }) => {
         </svg>
       </div>
       <div className={styles.flex}>
-        {items?.map((it: any) => renderItem(it))}
+        {items?.map((it: any) => (
+          <GoodsItem
+            key={it.id}
+            id={it.id}
+            name={getTranslate<any>(it?.translations, i18n.language)?.name}
+            image={it?.cover[0]?.fileUrl}
+            atribute={
+              getTranslate<any>(it?.translations, i18n.language)?.previewHtml
+            }
+            lang={i18n.language}
+          />
+        ))}
       </div>
       <Pagination
         defaultCurrent={1}

@@ -14,6 +14,7 @@ export default function Catalog({ searchParams }: { searchParams: any }) {
   const [price, setPrice] = useState("");
   const router = useRouter();
   const path = usePathname();
+  var res;
 
   const setSub = (val: any) => {
     setLoadParams({ ...val, page: 1 });
@@ -32,7 +33,7 @@ export default function Catalog({ searchParams }: { searchParams: any }) {
 
   const loadCatalog = async () => {
     try {
-      const res = await categoriesApi.getCatalog(loadParams?.categoryKey);
+      res = await categoriesApi.getCatalog(loadParams?.categoryKey);
       setCatalog(res?.data?.catalog?.fileUrl);
       setPrice(res?.data?.price?.fileUrl);
     } catch (error) {
@@ -42,8 +43,10 @@ export default function Catalog({ searchParams }: { searchParams: any }) {
 
   useEffect(() => {
     loadCatalog();
-    resetFlatList();
-  }, [searchParams.sub, searchParams.parent]);
+    setLoadParams({
+      categoryKey: searchParams.sub || searchParams.parent,
+    });
+  }, [searchParams]);
 
   return (
     <>

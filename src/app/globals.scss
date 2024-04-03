@@ -184,3 +184,9 @@ section {
     padding-top: 30px;
   }
 }
+
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

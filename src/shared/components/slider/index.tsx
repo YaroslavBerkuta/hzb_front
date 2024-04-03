@@ -26,9 +26,14 @@ export const Slider: FC<IProps> = ({ slides }) => {
 
   const renderItem = useCallback(
     (it: string, index: number) => {
+      const parts = it.split(".");
+      const fileFormat = parts[parts.length - 1];
+      console.log('fileFormat:',fileFormat)
       return (
         <SwiperSlide key={index}>
-          <Image src={it} width={880} height={680} alt="slide" />
+          {
+            fileFormat !== 'mp4' ?  <Image src={it} width={880} height={680} alt="slide" /> : <video src={it} controls/>
+          }
         </SwiperSlide>
       );
     },
