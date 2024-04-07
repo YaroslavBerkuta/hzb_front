@@ -31,9 +31,9 @@ export default function Catalog({ searchParams }: { searchParams: any }) {
       },
     });
 
-  const loadCatalog = async () => {
+  const loadCatalog = async (category: string) => {
     try {
-      res = await categoriesApi.getCatalog(loadParams?.categoryKey);
+      res = await categoriesApi.getCatalog(category);
       setCatalog(res?.data?.catalog?.fileUrl);
       setPrice(res?.data?.price?.fileUrl);
     } catch (error) {
@@ -42,10 +42,10 @@ export default function Catalog({ searchParams }: { searchParams: any }) {
   };
 
   useEffect(() => {
-    loadCatalog();
     setLoadParams({
       categoryKey: searchParams.sub || searchParams.parent,
     });
+    loadCatalog(searchParams.sub || searchParams.parent);
   }, [searchParams]);
 
   return (
