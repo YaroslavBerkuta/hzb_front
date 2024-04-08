@@ -21,7 +21,7 @@ const getWindowWidth = () => {
   return 1620;
 };
 
-export const HeaderTop: FC<IProps> = ({}) => {
+export const HeaderTop: FC<IProps & { setIsMenuVisible: (isVisible: boolean) => void }> = ({ setIsMenuVisible }) => {
   const [width, setWidth] = useState(getWindowWidth());
 
   useLayoutEffect(() => {
@@ -54,7 +54,7 @@ export const HeaderTop: FC<IProps> = ({}) => {
     }
   }, [width]);
   return (
-    <div className={styles.header_top}>
+    <div className={styles.header_top} onMouseEnter={() => setIsMenuVisible(true)}>
       <div className="container">
         <div className={styles.header_flex}>
           <Link href="/" className={styles.header_logo}>

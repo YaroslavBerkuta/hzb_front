@@ -50,14 +50,14 @@ function Home() {
           <Advantages />
         </div>
       </section>
-      {/* <section>
+       <section>
         <div className="container">
           <div className="sectionTitle">
             <h2>КАТАЛОГ</h2>
           </div>
           <CatalogPrewiev name="" image="" key="" />
         </div>
-      </section> */}
+      </section> 
       <section>
         <div className="container">
           <div className="sectionTitle">

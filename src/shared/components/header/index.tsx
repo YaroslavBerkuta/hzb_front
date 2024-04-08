@@ -1,5 +1,5 @@
 "use client";
-import React, { FC, useEffect } from "react";
+import React, { FC, useEffect, useState } from "react";
 import styles from "./index.module.scss";
 import { HeaderTop } from "./header-top";
 import { HeaderBottom } from "./header-bottom";
@@ -10,6 +10,7 @@ import "@/i18n";
 interface IProps {}
 
 export const Header: FC<IProps> = ({}) => {
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
   const detecLang = () => {
     const language = getStorage("lang");
     if (language) {
@@ -22,8 +23,8 @@ export const Header: FC<IProps> = ({}) => {
   }, []);
   return (
     <header className={styles.header}>
-      <HeaderTop />
-      <HeaderBottom />
+      <HeaderTop setIsMenuVisible={setIsMenuVisible} />
+      {isMenuVisible && <HeaderBottom setIsMenuVisible={setIsMenuVisible} />}
     </header>
   );
 };

@@ -10,9 +10,7 @@ export default function About() {
   const { t } = useTranslation();
   return (
     <>
-      <section>
-        <Breadcrumbs />
-      </section>
+      <Breadcrumbs />
       <section>
         <div className="container">
           <div className="sectionTitle">

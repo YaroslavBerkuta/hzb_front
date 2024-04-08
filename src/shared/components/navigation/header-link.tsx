@@ -7,13 +7,20 @@ interface IProps {
   it: IHeaderMenu;
   className: any;
   onClick: (key: string) => void;
+  onMouseEnter: (key: string) => void;
+  onMouseLeave: () => void;
   query?: any;
 }
 
-export const HeaderLink: FC<IProps> = ({ it, className, onClick, query }) => {
-  const handleClick = () => {
+export const HeaderLink: FC<IProps> = ({ it, className, onClick, onMouseEnter, onMouseLeave, query }) => {
+  const conditionalOnMouseEnter = () => {
     if (!it.image) {
-      onClick(it.key);
+      onMouseEnter(it.key);
+    }
+  };
+  const conditionalOnMouseLeave = () => {
+    if (!it.image) {
+      onMouseLeave();
     }
   };
 
@@ -26,7 +33,8 @@ export const HeaderLink: FC<IProps> = ({ it, className, onClick, query }) => {
       key={it.key}
       className={className(it.key)}
       onClick={() => onClick(it.key)}
-      onMouseEnter={handleClick}
+      onMouseEnter={conditionalOnMouseEnter}
+      onMouseLeave={conditionalOnMouseLeave}
     >
       {it.image && (
         <Image src={it.image} width={72} height={72} alt={it.label} />
@@ -34,7 +42,7 @@ export const HeaderLink: FC<IProps> = ({ it, className, onClick, query }) => {
       {it.label}
     </Link>
   ) : (
-    <li className={className(it.key)} onMouseEnter={handleClick}>
+    <li className={className(it.key)} onMouseEnter={conditionalOnMouseEnter} onMouseLeave={conditionalOnMouseLeave}>
       {it.image && (
         <Image src={it.image} width={72} height={72} alt={it.label} />
       )}
