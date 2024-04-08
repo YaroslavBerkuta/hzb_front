@@ -5,15 +5,15 @@ import React, { FC } from "react";
 import styles from "./index.module.scss";
 
 interface IProps {
-  url: string;
-  link: string;
+  imageUrl: string;
+  postUrl: string;
 }
 
-export const InstagramPost: FC<IProps> = ({ url, link }) => {
+export const InstagramPost: FC<IProps> = ({ imageUrl, postUrl }) => {
   return (
-    <Link href={link} className={styles.item} target="_blank">
+    <Link href={postUrl} className={styles.item} target="_blank">
       <Image
-        src={url}
+        src={imageUrl}
         alt="post"
         loading="lazy"
         layout="fill"
