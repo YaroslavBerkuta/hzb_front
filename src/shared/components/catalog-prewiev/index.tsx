@@ -12,10 +12,10 @@ interface IProps {
 export const CatalogPrewiev: FC<IProps> = ({ image, name, key }) => {
   return (
     <div className={styles.flex}>
-      <Link href="/" className={styles.item}>
+      <Link href="/catalog?parent=rcp" className={styles.item}>
         <div className={styles.image}>
           <Image
-            src={'/catalog.png'}
+            src={'/zb.jpg'}
             loading="lazy"
             layout="fill"
             objectFit="fill"
@@ -27,10 +27,10 @@ export const CatalogPrewiev: FC<IProps> = ({ image, name, key }) => {
           <p>Залізобетонні вироби</p>
         </div>
       </Link>
-      <Link href="/" className={styles.item}>
+      <Link href="/catalog?parent=cam" className={styles.item}>
         <div className={styles.image}>
           <Image
-            src={'/catalog.png'}
+            src={'/beton.jpg'}
             loading="lazy"
             layout="fill"
             objectFit="fill"
@@ -38,14 +38,14 @@ export const CatalogPrewiev: FC<IProps> = ({ image, name, key }) => {
           />
         </div>
         <div className={styles.desc}>
-          <Image src="/zb.svg" width={72} height={72} alt="zb" />
+          <Image src="/beton.svg" width={72} height={72} alt="beton" />
           <p>Бетони та розчини</p>
         </div>
       </Link>
-      <Link href="/" className={styles.item}>
+      <Link href="/catalog?parent=cp" className={styles.item}>
         <div className={styles.image}>
           <Image
-            src={'/catalog.png'}
+            src={'/stolar.jpg'}
             loading="lazy"
             layout="fill"
             objectFit="fill"
@@ -53,7 +53,7 @@ export const CatalogPrewiev: FC<IProps> = ({ image, name, key }) => {
           />
         </div>
         <div className={styles.desc}>
-          <Image src="/zb.svg" width={72} height={72} alt="zb" />
+          <Image src="/stolar.svg" width={72} height={72} alt="stolar" />
           <p>Вироби з деревини</p>
         </div>
       </Link>
