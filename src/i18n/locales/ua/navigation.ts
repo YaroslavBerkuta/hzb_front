@@ -18,6 +18,6 @@ export const navTranslation = {
   contact: {
     label: "Контакти",
     el1: "Зв'язок",
-    el2: "ДИСТРИБ’ЮТОРИ",
+    el2: "ДИСТРИБ\'ЮТОРИ",
   },
 };

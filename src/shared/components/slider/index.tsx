@@ -9,9 +9,11 @@ import styles from "./index.module.scss";
 
 interface IProps {
   slides?: any[];
+  width?: number;
+  height?: number;
 }
 
-export const Slider: FC<IProps> = ({ slides }) => {
+export const Slider: FC<IProps> = ({ slides, width, height }) => {
   const sliderRef = useRef<any>(null);
 
   const handlePrev = useCallback(() => {
@@ -32,7 +34,7 @@ export const Slider: FC<IProps> = ({ slides }) => {
       return (
         <SwiperSlide key={index}>
           {
-            fileFormat !== 'mp4' ?  <Image src={it} width={880} height={680} alt="slide" /> : <video src={it} controls/>
+            fileFormat !== 'mp4' ?  <Image src={it} width={width} height={height} alt="slide" /> : <video src={it} width={width} height={height} controls/>
           }
         </SwiperSlide>
       );

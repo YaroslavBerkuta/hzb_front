@@ -37,7 +37,7 @@ export const Instagram = () => {
     return "";
   }
   return (
-    <div className={styles.flex}>
+    <div className={styles.grid}>
       {posts.map(post => (
         <InstagramPost imageUrl={getPostUrl(post)} postUrl={post.permalink} />
       ))}

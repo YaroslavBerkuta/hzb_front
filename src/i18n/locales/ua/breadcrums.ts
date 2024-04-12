@@ -9,6 +9,6 @@ export const breadcrumsTranslate = {
   awards: "Нагороди",
   contacts: "Контакти",
   main: "Зв'язок",
-  distribution: "Дистрибютори",
+  distribution: "Дистриб\'ютори",
   catalog: "Каталог",
 };

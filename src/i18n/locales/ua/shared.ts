@@ -4,7 +4,7 @@ export const sharedTranslation = {
     partners: "ПАРТНЕРИ",
     clients: "НАШІ КЛІЄНТИ",
     instagram: "ІНСТАГРАМ",
-    question: "ЗАПИТАННЯ - ВІДПОВІДЬ",
+    question: "ЗВ'ЯЗАТИСЬ З НАМИ",
     contact: "КОНТАКТИ ПІДПРИЄМСТВА",
     adress: "НАША АДРЕСА",
     labolatory: "ВИПРОБУВАЛЬНА ЛАБОРАТОРІЯ",

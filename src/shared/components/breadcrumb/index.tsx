@@ -21,9 +21,13 @@ export const Breadcrumbs: FC<{ color?: string; children?: any }> = ({
       linkPath.shift();
 
       const pathArray = linkPath.map((path, i) => {
+        let href = "/" + linkPath.slice(0, i + 1).join("/");
+        if (path === 'catalog' && i === 0) {
+          href += "?parent=rcp";
+        }
         return {
           title: t(`bread.${path}`),
-          href: "/" + linkPath.slice(0, i + 1).join("/"),
+          href: href,
           key: path,
         };
       });

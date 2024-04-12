@@ -18,7 +18,9 @@ export const LabolatoryItem: FC<IProsp> = ({ title, description, images }) => {
         </div>
         <div dangerouslySetInnerHTML={{ __html: description }} />
       </div>
-      <Slider slides={images.map((it: any) => it.fileUrl)} />
+      <div className={styles.slider}>
+        <Slider slides={images.map((it: any) => it.fileUrl)} width={880} height={680} />
+      </div>
     </div>
   );
 };

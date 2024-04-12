@@ -19,27 +19,28 @@ export const GoodsList: FC<IProps> = ({ items, count, setParams, page }) => {
 
   const renderSelect = useMemo(() => {
     return (
-      <Select
-        className={styles.sort}
-        placeholder={i18n.language === Lang.UA ? "Сортувати за" : "Sort by"}
-        onChange={(val) => setParams({ sort: val })}
-        options={[
-          {
-            value: "ASC",
-            label:
-              i18n.language === Lang.UA
-                ? "По алфавіту від А - Я"
-                : "Alphabetically from A to Z",
-          },
-          {
-            value: "DESC",
-            label:
-              i18n.language === Lang.UA
-                ? "По алфавіту від Я - A"
-                : "Alphabetically from Z to A",
-          },
-        ]}
-      />
+      null
+      // <Select
+      //   className={styles.sort}
+      //   placeholder={i18n.language === Lang.UA ? "Сортувати за" : "Sort by"}
+      //   onChange={(val) => setParams({ sort: val })}
+      //   options={[
+      //     {
+      //       value: "ASC",
+      //       label:
+      //         i18n.language === Lang.UA
+      //           ? "По алфавіту від А - Я"
+      //           : "Alphabetically from A to Z",
+      //     },
+      //     {
+      //       value: "DESC",
+      //       label:
+      //         i18n.language === Lang.UA
+      //           ? "По алфавіту від Я - A"
+      //           : "Alphabetically from Z to A",
+      //     },
+      //   ]}
+      // />
     );
   }, [i18n.language]);
 

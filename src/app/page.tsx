@@ -6,6 +6,7 @@ import {
   Clients,
   Instagram,
   Partner,
+  Slider,
   TaskAnswer,
 } from "@/shared/components";
 import styles from "@/shared/styles/Home.module.scss";
@@ -13,11 +14,24 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { SwiperSlide } from "swiper/react";
 
 function Home() {
   const myRef = useRef<any>(null);
   const executeScroll = () => myRef?.current.scrollIntoView();
   const { t } = useTranslation();
+  const photoUrls = [
+    "/main/1.jpg",
+    "/main/2.jpg",
+    "/main/3.jpg",
+    "/main/4.jpg",
+    "/main/5.jpg",
+    "/main/6.jpg",
+    "/main/7.jpg",
+    "/main/8.jpg",
+    "/main/9.jpg",
+    "/main/10.jpg",
+  ];
   return (
     <>
       <section className={styles.hero}>
@@ -31,13 +45,7 @@ function Home() {
               />
             </div>
             <div className={styles.heroImage}>
-              <Image
-                src="/main.png"
-                alt="main"
-                loading="lazy"
-                layout="fill"
-                objectFit="contain"
-              />
+              <Slider slides={photoUrls.map((url, index)=>url)} width={1576} height={500} />
             </div>
           </div>
         </div>

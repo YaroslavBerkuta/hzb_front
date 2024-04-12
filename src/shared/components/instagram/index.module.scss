@@ -1,11 +1,10 @@
-.flex {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 24px;
 }
 
 .item {
-  max-width: 25%;
   width: 100%;
   position: relative;
   min-height: 400px;
@@ -13,12 +12,14 @@
 
 @media (max-width: 1024px) {
   .item {
-    max-width: 48%;
     margin-bottom: 15px;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 500px) {
-  .item {
-    min-height: 155px;
+  .grid {
+    grid-template-columns: 1fr;
   }
 }

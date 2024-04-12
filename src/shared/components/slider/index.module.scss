@@ -1,7 +1,8 @@
 .slider {
   margin: 0;
-  max-width: 880px;
-  max-height: 680px;
+  // max-width: 880px;
+  // max-height: 680px;
+  object-fit: cover;
   width: 100%;
   position: "relative";
   .bullet {
@@ -42,9 +43,9 @@
 }
 
 @media (max-width: 1440px) {
-  .slider {
-    max-width: 670px;
-  }
+  // .slider {
+  //   max-width: 670px;
+  // }
   .item {
     padding: 40px 80px;
   }

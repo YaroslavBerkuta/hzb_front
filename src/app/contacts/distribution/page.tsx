@@ -33,7 +33,7 @@ export default function Distribution() {
               <div className="sectionTitle">
                 <h2>
                   {getTranslate<any>(data?.translations, i18n.language)?.name ||
-                    "Дистрибютора не знайдено"}
+                    "Дистриб\'ютора не знайдено"}
                 </h2>
               </div>
               <div className={styles.contact}>

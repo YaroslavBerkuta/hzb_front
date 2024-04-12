@@ -25,7 +25,7 @@
 
 .heroImage {
   width: 100%;
-  height: 100%;
+  height: auto !important;
   position: relative;
   min-height: 500px;
   margin-top: 50px;
@@ -41,7 +41,7 @@
   .heroImage {
     img {
       width: 100% !important;
-      height: 100% !important;
+      height: 500px !important;
       object-fit: cover !important;
     }
   }
@@ -62,7 +62,6 @@
   .heroImage {
     margin-top: 0;
     position: relative;
-    z-index: -1;
   }
   .heroDesc {
     margin-top: 20px;
