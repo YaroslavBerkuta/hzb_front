@@ -6,10 +6,7 @@ import styles from "./index.module.scss";
 import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide} from "swiper/react";
 import { getPartners } from "@/shared/api/partners";
-import { getTranslate } from "@/shared/helpers";
 import { useFlatList } from "@/shared/hook";
-import { i18n } from "next-i18next";
-import Link from "next/link";
 
 export const Clients = () => {
   const { t } = useTranslation();
@@ -99,6 +96,11 @@ export const Clients = () => {
         },
         320: { slidesPerView: 1 },
       }}
+      autoplay={{
+        delay: 3000,
+        disableOnInteraction: false, 
+      }}
+      loop={true}
     >
       {data.map((it: any) => (
         <SwiperSlide key={it.id} className={styles.item}>

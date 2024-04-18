@@ -22,7 +22,7 @@ export default function Catalog({ searchParams }: { searchParams: any }) {
     router.push(url);
   };
 
-  const { items, count, setLoadParams, resetFlatList, loadParams } =
+  const { items, count, setLoadParams, loadParams } =
     useFlatList<any>({
       fetchItems: productApi.getLis,
       needInit: true,

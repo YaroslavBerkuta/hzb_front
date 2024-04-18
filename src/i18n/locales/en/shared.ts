@@ -28,7 +28,7 @@ export const sharedTranslation = {
     phone: "Phone",
     adress: "Adress",
     reception: "Reception",
-    homeTitle: "IN CONSTRUCTION, YOU NEED TO WORK WITH REAL PROFESSIONALS",
+    homeTitle: "UKRAINE IS BEING BUILT WITH US",
   },
   contact: {
     title: "Contact",

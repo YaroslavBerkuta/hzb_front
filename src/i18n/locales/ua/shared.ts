@@ -29,7 +29,7 @@ export const sharedTranslation = {
     adress: "Адреса",
     reception: "Приймальня",
     homeTitle:
-      "В СПРАВІ БУДІВНИЦТВА ПОТРІБНО ПРАЦЮВАТИ З СПРАВЖНІМИ ПРОФЕСІОНАЛАМИ",
+      "З НАМИ БУДУЄТЬСЯ УКРАЇНА",
   },
   contact: {
     title:'КОНТАКТИ',

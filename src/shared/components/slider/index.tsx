@@ -4,6 +4,9 @@ import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
+import SwiperCore from 'swiper';
+SwiperCore.use([Autoplay]);
 
 import styles from "./index.module.scss";
 
@@ -11,9 +14,10 @@ interface IProps {
   slides?: any[];
   width?: number;
   height?: number;
+  autoplay?: { delay: number };
 }
 
-export const Slider: FC<IProps> = ({ slides, width, height }) => {
+export const Slider: FC<IProps> = ({ slides, width, height, autoplay }) => {
   const sliderRef = useRef<any>(null);
 
   const handlePrev = useCallback(() => {
@@ -51,6 +55,10 @@ export const Slider: FC<IProps> = ({ slides, width, height }) => {
         bulletClass: `swiper-pagination-bullet ${styles.bullet}`,
       }}
       ref={sliderRef}
+      autoplay={{
+        delay: autoplay?.delay,
+        disableOnInteraction: false, 
+      }}
     >
       {slides?.map((it: any, index) => renderItem(it, index))}
       <div className={styles.navigation}>
