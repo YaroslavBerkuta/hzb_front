@@ -1,18 +1,18 @@
 "use client";
 import React from "react";
-import stylse from "./index.module.scss";
+import styles from "./index.module.scss";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
   const { t } = useTranslation();
   return (
-    <footer className={stylse.footer}>
+    <footer className={styles.footer}>
       <div className="container">
         <div className="sectionTitle">
           <h2>{t("shared.sectionTitle.contact")}</h2>
         </div>
-        <ul className={stylse.contact}>
+        <ul className={styles.contact}>
           <li>
             <span>{t("shared.element.adress")}:</span>
             <p>{t("shared.contact.adress")}</p>
@@ -26,7 +26,7 @@ export const Footer = () => {
             <p>ula-hzb@ukr.net</p>
           </li>
         </ul>
-        <ul className={stylse.social}>
+        <ul className={styles.social}>
           <Link href={"https://www.instagram.com/hzb.ukraine/"} target="_blank">
             <svg
               width="15"
