@@ -41,12 +41,12 @@ export default function Contacts() {
               </div>
               <ul className={styles.contactWarapper}>
                 <div className="sectionTitle">
-                  <h2 style={{ fontWeight: "400" }}>ЗАЛІЗОБЕТОНІ ВИРОБИ</h2>
+                  <h2 style={{ fontWeight: "400" }}>ЗАЛІЗОБЕТОННІ ВИРОБИ</h2>
                 </div>
                 <li>
                   <span>Телефон:</span>
                   <div>
-                    {/* <p>+380969176074</p> */}
+                    <p>+380969176074</p>
                     <p>+380988671678</p>
                     <p>+380677578106</p>
                     <p>(0382)643025</p>
