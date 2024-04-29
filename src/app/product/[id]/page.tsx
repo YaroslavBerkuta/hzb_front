@@ -78,7 +78,7 @@ export default function Product() {
             />
             <div className={styles.detailContainer}>
               <div className={styles.slider}>
-                <Slider slides={data?.gallery?.map((it: any) => it.fileUrl)} />
+                <Slider slides={data?.gallery?.map((it: any) => it.fileUrl)} width={600} height={400} autoplayEnabled={false}/>
               </div>
               <div
                 className={styles.detail}

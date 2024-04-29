@@ -15,9 +15,10 @@ interface IProps {
   width?: number;
   height?: number;
   autoplay?: { delay: number };
+  autoplayEnabled?: boolean;
 }
 
-export const Slider: FC<IProps> = ({ slides, width, height, autoplay }) => {
+export const Slider: FC<IProps> = ({ slides, width, height, autoplay, autoplayEnabled }) => {
   const sliderRef = useRef<any>(null);
 
   const handlePrev = useCallback(() => {
@@ -55,10 +56,7 @@ export const Slider: FC<IProps> = ({ slides, width, height, autoplay }) => {
         bulletClass: `swiper-pagination-bullet ${styles.bullet}`,
       }}
       ref={sliderRef}
-      autoplay={{
-        delay: autoplay?.delay,
-        disableOnInteraction: false, 
-      }}
+      autoplay={autoplayEnabled ? { delay: autoplay?.delay, disableOnInteraction: false } : undefined}
     >
       {slides?.map((it: any, index) => renderItem(it, index))}
       <div className={styles.navigation}>

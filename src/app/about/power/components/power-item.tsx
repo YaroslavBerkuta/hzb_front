@@ -17,7 +17,9 @@ export const PowerItem: FC<IProps> = ({ title, content, images }) => {
         </div>
         <div dangerouslySetInnerHTML={{ __html: content }}></div>
       </div>
-      <Slider slides={images.map((it) => it.fileUrl)} />
+      <div className={styles.slider}>
+        <Slider slides={images.map((it) => it.fileUrl)} width={880} height={680} autoplayEnabled={false} />
+      </div>
     </div>
   );
 };

@@ -45,7 +45,7 @@ function Home() {
               />
             </div>
             <div className={styles.heroImage}>
-              <Slider slides={photoUrls.map((url, index)=>url)} width={1576} height={500} autoplay={{ delay: 5000 }}/>
+              <Slider slides={photoUrls.map((url, index)=>url)} width={1576} height={500} autoplay={{ delay: 5000 }} autoplayEnabled={true}/>
             </div>
           </div>
         </div>

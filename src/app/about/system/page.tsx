@@ -50,7 +50,9 @@ export default function System() {
                     />
                   </a>
                 </div>
-                <Slider slides={it.cover.map((it: any) => it.fileUrl)} />
+                <div className={styles.slider}>
+                  <Slider slides={it.cover.map((it: any) => it.fileUrl)} width={880} height={680} autoplayEnabled={false}/>
+                </div>
               </div>
             ))}
           </div>
