@@ -31,6 +31,7 @@ function Home() {
     "/main/3.jpg",
     "/main/9.jpg",
     "/main/10.jpg",
+    "/main/12.jpg",
   ];
   return (
     <>
