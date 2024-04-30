@@ -17,12 +17,16 @@ export const GoodsItem: FC<IProps> = ({ name, image, atribute, id, lang }) => {
   return (
     <div className={styles.item}>
       <div className={styles.content}>
-        <h2>{name}</h2>
+        <div className={styles.title}>
+          <h2>
+            {name}
+          </h2>
+        </div>
         <div className={styles.img}>
           <Image src={image} alt={name} layout="fill" />
         </div>
         <p className={styles.shortTitle}>
-          {lang === Lang.UA ? "Короткий опис" : "Short descriptions"}
+          {lang === Lang.UA ? "Короткий опис:" : "Short descriptions:"}
         </p>
         <div
           className={styles.detail}
