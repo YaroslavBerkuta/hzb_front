@@ -15,10 +15,9 @@
 }
 
 .slider {
-  max-width: 600px;
+  width: 600px;
   height: 400px;
   div:first-child {
-
     div {
       svg {
         rect {
@@ -74,13 +73,17 @@
 }
 
 @media (max-width: 1024px) {
+  .detailContainer {
+    flex-direction: column;
+  }
   .detail {
+    margin-top: 30px;
+    margin-left: 0;
     p {
       font-size: 20px;
     }
   }
   .slider {
-    max-width: 55%;
     div {
       margin-top: 0 !important;
     }
@@ -93,9 +96,13 @@
   }
   .slider {
     max-width: 100%;
+    img {
+      object-fit: cover;
+    }
   }
   .detail {
     margin-top: 30px;
+    margin-left: 0;
   }
 }
 

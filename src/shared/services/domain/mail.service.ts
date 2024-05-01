@@ -6,6 +6,6 @@ export const sendForm = async (data: IMainFormData) => {
     await sendMail(data);
     message.success("Ваше повідомлення доставлено");
   } catch (error) {
-    message.error("Ваше поввідомлення не доставлено");
+    message.error("Ваше повідомлення не доставлено");
   }
 };
